@@ -2,17 +2,25 @@ import { display } from "@mui/system";
 import React, { Component, Fragment, useState } from "react";
 import main from './main.css'
 import { Link, Outlet } from "react-router-dom";
-
+import audi1 from '../components/audio1.wav'
+import audi2 from '../components/audio/audio2.wav'
+import audi3 from '../components/audio/audio3.wav'
+import { Slider, RangeSlider } from 'rsuite';
+// import './styles.css';
+import './slider.less';
 
 function Main(){
     const [lang, setLang]=useState('eng')
     const [voiceChoice, setVoiceChoice]=useState('one')
     const [volumeAct,setVolumeAct]=useState(false)
     const [volPanel, setVolPanel]=useState(false)
+    const [slideValue,setSlideValue]=useState(10)
 
     let langArr=true
 
-    // let volumeAct=false
+    let audio1=new Audio(audi1)
+    let audio2=new Audio(audi2)
+    let audio3=new Audio(audi3)
 
     const handleLanguage=()=>{
         if(langArr){
@@ -25,8 +33,28 @@ function Main(){
         }
     }
 
+  const handleChange = ()=> {
+        // console.log(value)
+        // setSlideValue(value)
+      };
+
     const handleVolumeAct=()=>{
+        
+        // console.log('shamil')
         setVolumeAct(!volumeAct)
+    }
+
+    const chooseAudio=(e)=>{
+        if(e=='one'){
+            audio1.play()
+        }
+        if(e=='two'){
+            audio2.play()
+        }
+        if(e=='three'){
+            audio3.play()
+        }
+        setVoiceChoice(e)
     }
 
     return (
@@ -42,28 +70,38 @@ function Main(){
                 <div className="audioPanel">
                     <span onClick={()=>handleVolumeAct()} className={voiceChoice=='three' ? "volume thirdVoice" : voiceChoice=='four' ? "volume fourthVoice" :  voiceChoice=='two' ? 'volume secondVoice' : 'volume firstVoice' }></span>
                     <ul className={volumeAct==true ? "volumeList volActive" : "volumeList"}  >
-                        <li><span onClick={()=> setVoiceChoice('one')} className="close voices firstVoice"></span></li>
-                        <li><span onClick={()=> setVoiceChoice('two')} className="close voices secondVoice"></span></li>
-                        <li><span onClick={()=> setVoiceChoice('three')} className="close voices thirdVoice"></span></li>
-                        <li><span onClick={()=> setVoiceChoice('four')} className="close voices fourthVoice"></span></li>
+                        <li><span onClick={()=> chooseAudio('one')} className="voices firstVoice"></span></li>
+                        <li><span onClick={()=> chooseAudio('two')} className="voices secondVoice"></span></li>
+                        <li><span onClick={()=> chooseAudio('three')} className="voices thirdVoice"></span></li>
+                        <li><span onClick={()=> chooseAudio('four')} className="voices fourthVoice"></span></li>
                     </ul>
                 </div>
                 <div className="volumeWrapper">
                     <div onClick={()=> setVolPanel(!volPanel)} className="volumePanel" id="maximum"></div>
+                    {/* <Slider
+                orientation="vertical"
+                getAriaValueText={slideValue}
+                valueLabelDisplay="auto"
+                defaultValue={30}
+      /> */}
+                    {/* <Slider
+  size="small"
+  defaultValue={70}
+  aria-label="Small"
+  valueLabelDisplay="auto"
+/>
+<Slider defaultValue={50} aria-label="Default" valueLabelDisplay="auto" /> */}
+
+                    {/* <Slider className="slider"
+                    min={0}
+                    max={100}
+                    value={slideValue}
+                    orientation='vertical'
+                    onChange={()=>handleChange()}
+        /> */}
                     <div className={volPanel==false ? "slide_line_volume" : "slide_line_volume visActive"}>
-                    <div className="point_volume active" data-volume=" 1 ">
-                    </div>
-                    <div className="point_volume" data-volume=" 0.9 "></div>
-                    <div className="point_volume" data-volume=" 0.8 ">
-                    </div><div className="point_volume" data-volume=" 0.7 ">
-                    </div><div className="point_volume" data-volume=" 0.6 ">
-                    </div><div className="point_volume" data-volume=" 0.5 ">
-                    </div><div className="point_volume" data-volume=" 0.4 ">
-                    </div><div className="point_volume" data-volume=" 0.3 ">
-                    </div><div className="point_volume" data-volume=" 0.2 ">
-                    </div><div className="point_volume" data-volume=" 0.1 "></div>
-                     <div className="before"></div>
-                     <div className="after"></div>
+                <Slider style={{ height: 100 }} progress vertical onChange={()=>handleChange()} />
+                    
                   </div>
                 </div>
             </div>
