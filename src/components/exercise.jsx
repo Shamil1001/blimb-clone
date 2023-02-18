@@ -48,7 +48,7 @@ function Exercise(){
     useEffect(() => {
         setTimeout(() => {
         SoundPlay(audioClips[0].sound)
-            //   navigate('/exer2')
+              navigate('/exer2')
         }, 16000)
       }, [])
 
@@ -76,7 +76,10 @@ function Exercise(){
         <>
         <div className="main">
         <div className="wrapper">
-            <div className="mini"></div>
+        <Link to='/' style={{color: 'white', textDecoration: 'none'}}>
+        <div className="eyes">
+            </div>
+        </Link>
             <div className="optionPanel">
                 <span onClick={()=>handleLanguage()} className="languagePanel">
                     <span>{lang=='eng' ? "Eng" : 'Ru'}</span>

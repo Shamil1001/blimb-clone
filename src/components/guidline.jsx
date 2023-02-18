@@ -37,8 +37,10 @@ function Guidline(){
         <>
         <div className="main">
         <div className="wrapper">
+        <Link to='/' style={{color: 'white', textDecoration: 'none'}}>
         <div className="eyes">
             </div>
+        </Link>
             <div className="optionPanel">
                 <span onClick={()=>handleLanguage()} className="languagePanel">
                     <span>{lang=='eng' ? "Eng" : 'Ru'}</span>

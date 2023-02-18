@@ -1,8 +1,8 @@
 import { display } from "@mui/system";
-import React, { Component, Fragment, useState } from "react";
+import React, { Component, Fragment, useState, useEffect } from "react";
 // import guid from './guidline.css'
 import exer from './exercise.css'
-import { Link, Outlet } from "react-router-dom";
+import { Link, Outlet, useNavigate } from "react-router-dom";
 import { useSpring, animated } from "react-spring";
 
 function Number({n}){
@@ -25,13 +25,13 @@ function Exer2(){
 
     let langArr=true
 
-    // const navigate = useNavigate()
+    const navigate = useNavigate()
 
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //       navigate('/exer2')
-    //     }, 16000)
-    //   }, [])
+    useEffect(() => {
+        setTimeout(() => {
+          navigate('/')
+        }, 18000)
+      }, [])
 
     
 
@@ -56,7 +56,10 @@ function Exer2(){
         <>
         <div className="main">
         <div className="wrapper">
-            <div className="mini"></div>
+        <Link to='/' style={{color: 'white', textDecoration: 'none'}}>
+        <div className="eyes">
+            </div>
+        </Link>
             <div className="optionPanel">
                 <span onClick={()=>handleLanguage()} className="languagePanel">
                     <span>{lang=='eng' ? "Eng" : 'Ru'}</span>
@@ -91,10 +94,10 @@ function Exer2(){
             </div>
         </div>
         <div className="navyExer">
-            <h1 className="guidTitle">Relax</h1>
-            <h1><Number n={15}/></h1>
+            <h1 className="guidTitle">Up-down</h1>
+            <h1><Number n={20}/></h1>
             <span class="engl">
-                Close your eyes until you hear a signal
+                For a second old your eyes in the upper and low points
             </span>
             
         </div>
