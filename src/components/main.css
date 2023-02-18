@@ -1,0 +1,324 @@
+.main{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(-45deg, #EE7752, #E73C7E, #23A6D5, #23D5AB);
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+  background-position: 0% 50%
+  }
+50% {
+background-position: 100% 50%
+}
+100% {
+background-position: 0% 50%
+}
+}
+
+@-moz-keyframes Gradient {
+  0% {
+  background-position: 0% 50%
+  }
+50% {
+background-position: 100% 50%
+}
+100% {
+background-position: 0% 50%
+}
+}
+
+@keyframes Gradient {
+  0% {
+  background-position: 0% 50%
+  }
+50% {
+background-position: 100% 50%
+}
+100% {
+background-position: 0% 50%
+}
+}
+
+
+.eye{
+    background-image: url('https://blimb.su/img/eyes.png');
+    background-position: 0 0;
+    width: 170px;
+    height: 100px;
+    transition-property: left, top, margin-left, width, height, margin-top;
+    -moz-transition-property: left, top, margin-left, width, height, margin-top;
+    transition-duration: .7s;
+    -moz-transition-duration: .7s;
+    background-size: 100%;
+    cursor: pointer;
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    margin-left: -85px;
+    opacity: 1;
+
+}
+
+.optionPanel{
+    position: absolute;
+    right: 50px;
+    top: 41px;
+    z-index: 1;
+    text-align: center;
+
+}
+
+.languagePanel{
+    display: inline-block;
+    width: 24px;
+    height: 20px;
+    border: 1px solid #fff;
+    color: #fff;
+    text-align: center;
+    padding-top: 3px;
+    font-size: 10px;
+    text-decoration: none !important;
+    border-radius: 3px;
+    opacity: .8;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.audioPanel{
+    display: inline-block;
+    position: relative;
+    margin-left: 24px;
+}
+
+.volumeList{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    top: 100%;
+    left: 0;
+    margin-top: 12px;
+    display: none;
+}
+
+.volActive{
+    display: block;
+}
+
+/* 
+.active{
+    display: block;
+} */
+
+.firstVoice{
+    background: url(https://blimb.su/img/icons.png) no-repeat;
+}
+
+.secondVoice{
+    background: url(https://blimb.su/img/icons.png) 0 -35px no-repeat;
+}
+
+.thirdVoice{
+    background: url(https://blimb.su/img/icons.png) 0 -100px no-repeat;
+}
+
+.fourthVoice{
+    background: url(https://blimb.su/img/icons.png) 0 -65px no-repeat;
+}
+
+
+/* ul{
+    list-style: none;
+} */
+.close{
+    opacity: 0.6;
+    transition-property: opacity, z-index;
+    transition-duration: 0.5s;
+    z-index: 1;
+}
+
+.voices{
+    display: inline-block;
+    width: 26px;
+    height: 24px;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.volume{
+    display: inline-block;
+    width: 26px;
+    height: 24px;
+    cursor: pointer;
+    position: relative;
+    top: 8px;
+    opacity: .6;
+}
+
+
+.volumeWrapper{
+    margin-left: 10px;
+    position: relative;
+    top: 3px;
+    displaY: inline-block;
+}
+
+.volumePanel{
+    width: 24px;
+    height: 19px;
+    display: inline-block;
+    background-image: url(https://blimb.su/img/volume.png);
+    background-position: 0 0;
+    opacity: .6;
+    cursor: pointer;
+}
+
+.visActive{
+
+    visibility: visible;
+    opacity: 0.6;
+    transition-property: visibility, opacity;
+    transition-duration: 1s;
+}
+
+.slide_line_volume{
+
+    width: 20px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    position: absolute;
+    right: 3px;
+    top: 35px;
+    visibility: hidden;
+    opacity: 0;
+    transition-property: visibility, opacity;
+    transition-duration: 1s;
+    display: none;
+
+}
+
+.visActive{
+    display: block;
+}
+
+.active{
+    visibility: visible;
+    opacity: 0.6;
+    transition-property: visibility, opacity;
+    transition-duration: 1s;
+}
+
+.point_volume{
+    position: relative;
+    z-index: 1;
+    height: 10px;
+}
+
+.before{
+    content: '';
+    position: absolute;
+    displaY: block;
+    width: 6px;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    margin-left: 7px;
+    z-index: 0;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    /* box-sizing: border-box; */
+    /* -webkit-box-sizing: border-box; */
+}
+
+.after{
+    content: '';
+    position: absolute;
+    displaY: block;
+    width: 6px;
+    top: 0px;
+    bottom: 0;
+    left: 0;
+    margin-left: 7px;
+    z-index: 0;
+    border: 1px solid #fff;
+    border-radius: 3px;
+    box-sizing: border-box;
+    /* -webkit-box-sizing: border-box; */
+    /* -moz-box-sizing: border-box; */
+}
+
+.navy{
+    position: absolute;
+    top: 50%;
+    margin-top: -45px;
+    width: 100%;
+    text-align: center;
+}
+
+#start {
+    position: relative;
+    cursor: pointer;
+    font-weight: normal;
+}
+
+.button {
+    display: inline-block;
+    border: 4px solid #fff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 18px;
+    padding: 12px 30px;
+    transition-property: border;
+    transition-duration: .1s;
+}
+
+.nav{
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 3px;
+    transition-property: padding-bottom, border-bottom;
+    transition-duration: .2s;
+    padding: 5px 10px;
+}
+
+.footer{
+    position: fixed;
+    bottom: 0;
+    height: 55px;
+    width: 100%;
+    z-index: 0;
+    text-align: center;
+}
+
+.social{
+    display: flex;
+    color: white;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.tweeter, .facebook, .Vk{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    /* background: white; */
+    /* opacity: 80%; */
+}
+
+
+
+
+

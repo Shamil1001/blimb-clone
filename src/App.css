@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.button-blue{
+  @apply bg-blue-500 text-white rounded p-2 mx-2
+}
+
+.button-blue:hover{
+  @apply bg-blue-600
+}
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: white;
+}
+
+.container{
+  max-width: 90%;
+  /* margin: auto; */
+}
+
+
+
+
+
