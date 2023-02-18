@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Shamil1001/blimb-clone.git/static/css/main.b14cd864.css",
-    "main.js": "/Shamil1001/blimb-clone.git/static/js/main.66218fce.js",
-    "static/js/787.5480e000.chunk.js": "/Shamil1001/blimb-clone.git/static/js/787.5480e000.chunk.js",
-    "static/media/fontawesome-webfont.svg?v=4.7.0": "/Shamil1001/blimb-clone.git/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
-    "static/media/fontawesome-webfont.eot": "/Shamil1001/blimb-clone.git/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
-    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/Shamil1001/blimb-clone.git/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
-    "static/media/fontawesome-webfont.woff?v=4.7.0": "/Shamil1001/blimb-clone.git/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
-    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/Shamil1001/blimb-clone.git/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
-    "index.html": "/Shamil1001/blimb-clone.git/index.html",
-    "main.b14cd864.css.map": "/Shamil1001/blimb-clone.git/static/css/main.b14cd864.css.map",
-    "main.66218fce.js.map": "/Shamil1001/blimb-clone.git/static/js/main.66218fce.js.map",
-    "787.5480e000.chunk.js.map": "/Shamil1001/blimb-clone.git/static/js/787.5480e000.chunk.js.map"
+    "main.css": "/blimb-clone/static/css/main.e648bc50.css",
+    "main.js": "/blimb-clone/static/js/main.5da50455.js",
+    "static/js/787.5480e000.chunk.js": "/blimb-clone/static/js/787.5480e000.chunk.js",
+    "static/media/fontawesome-webfont.svg?v=4.7.0": "/blimb-clone/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
+    "static/media/fontawesome-webfont.eot": "/blimb-clone/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
+    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/blimb-clone/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
+    "static/media/fontawesome-webfont.woff?v=4.7.0": "/blimb-clone/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
+    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/blimb-clone/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
+    "index.html": "/blimb-clone/index.html",
+    "main.e648bc50.css.map": "/blimb-clone/static/css/main.e648bc50.css.map",
+    "main.5da50455.js.map": "/blimb-clone/static/js/main.5da50455.js.map",
+    "787.5480e000.chunk.js.map": "/blimb-clone/static/js/787.5480e000.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b14cd864.css",
-    "static/js/main.66218fce.js"
+    "static/css/main.e648bc50.css",
+    "static/js/main.5da50455.js"
   ]
 }
