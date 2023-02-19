@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/blimb-clone/static/css/main.7ec287b6.css",
-    "main.js": "/blimb-clone/static/js/main.d6906ff0.js",
+    "main.css": "/blimb-clone/static/css/main.ba16635e.css",
+    "main.js": "/blimb-clone/static/js/main.def1fc6f.js",
     "static/js/787.5480e000.chunk.js": "/blimb-clone/static/js/787.5480e000.chunk.js",
     "static/media/audio3.wav": "/blimb-clone/static/media/audio3.4b92e28ef11651457ad7.wav",
     "static/media/fontawesome-webfont.svg?v=4.7.0": "/blimb-clone/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
@@ -13,12 +13,12 @@
     "static/media/fontawesome-webfont.woff2?v=4.7.0": "/blimb-clone/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
     "index.html": "/blimb-clone/index.html",
     "static/media/slider.less": "/blimb-clone/static/media/slider.541f41733690e0e34efb.less",
-    "main.7ec287b6.css.map": "/blimb-clone/static/css/main.7ec287b6.css.map",
-    "main.d6906ff0.js.map": "/blimb-clone/static/js/main.d6906ff0.js.map",
+    "main.ba16635e.css.map": "/blimb-clone/static/css/main.ba16635e.css.map",
+    "main.def1fc6f.js.map": "/blimb-clone/static/js/main.def1fc6f.js.map",
     "787.5480e000.chunk.js.map": "/blimb-clone/static/js/787.5480e000.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7ec287b6.css",
-    "static/js/main.d6906ff0.js"
+    "static/css/main.ba16635e.css",
+    "static/js/main.def1fc6f.js"
   ]
 }
