@@ -1,11 +1,8 @@
-.navyExer{
-    position: absolute;
-    top: 40%;
-    /* margin-top: -45px; */
-    margin-left: 20%;
-    width: 60%;
-    color: white;
-    text-align: center;
- 
+.navyExer {
+  position: absolute;
+  top: 40%;
+  margin-left: 20%;
+  width: 60%;
+  color: white;
+  text-align: center;
 }
-
