@@ -2,7 +2,7 @@ import React from "react";
 import reportWebVitals from "./reportWebVitals";
 import App from "./App";
 // import ReactDOM from 'react-dom';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
 import { createRoot } from "react-dom/client";
 import "bootstrap/dist/css/bootstrap.css";
 import "font-awesome/css/font-awesome.css";
