@@ -1,17 +1,10 @@
-import React, { Component, Fragment, useState } from "react";
-import guid from "./guidline.css";
+import React, { useState } from "react";
+import "./guidline.css";
 import { Link, Outlet } from "react-router-dom";
 import { Slider } from "rsuite";
 import "./slider.less";
-import audi1 from "../components/audio1.wav";
-import audi2 from "../components/audio/audio2.wav";
-import audi3 from "../components/audio/audio3.wav";
 
-function Guidline({ list }) {
-  let audio1 = new Audio(audi1);
-  let audio2 = new Audio(audi2);
-  let audio3 = new Audio(audi3);
-
+function Guidline({ list, pylan }) {
   const [lang, setLang] = useState("eng");
   const [voiceChoice, setVoiceChoice] = useState("one");
   const [volumeAct, setVolumeAct] = useState(false);
@@ -45,15 +38,7 @@ function Guidline({ list }) {
   };
 
   const chooseAudio = (e) => {
-    if (e == "one") {
-      audio1.play();
-    }
-    if (e == "two") {
-      audio2.play();
-    }
-    if (e == "three") {
-      audio3.play();
-    }
+    pylan[e].play();
     setAudio(e);
     setVoiceChoice(e);
   };
@@ -67,24 +52,24 @@ function Guidline({ list }) {
           </Link>
           <div className="optionPanel">
             <span onClick={() => handleLanguage()} className="languagePanel">
-              <span>{lang == "eng" ? "Eng" : "Ru"}</span>
+              <span>{lang === "eng" ? "Eng" : "Ru"}</span>
             </span>
             <div className="audioPanel">
               <span
                 onClick={() => handleVolumeAct()}
                 className={
-                  voiceChoice == "three"
+                  voiceChoice === "three"
                     ? "volume thirdVoice"
-                    : voiceChoice == "four"
+                    : voiceChoice === "four"
                     ? "volume fourthVoice"
-                    : voiceChoice == "two"
+                    : voiceChoice === "two"
                     ? "volume secondVoice"
                     : "volume firstVoice"
                 }
               ></span>
               <ul
                 className={
-                  volumeAct == true ? "volumeList volActive" : "volumeList"
+                  volumeAct === true ? "volumeList volActive" : "volumeList"
                 }
               >
                 {list.map((item) => (
@@ -105,7 +90,7 @@ function Guidline({ list }) {
               ></div>
               <div
                 className={
-                  volPanel == false
+                  volPanel === false
                     ? "slide_line_volume"
                     : "slide_line_volume visActive"
                 }

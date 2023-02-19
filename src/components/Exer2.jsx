@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from "react";
-import exer from "./exercise.css";
+import "./exercise.css";
 import { Link, Outlet, useNavigate } from "react-router-dom";
 import { useSpring, animated } from "react-spring";
 import { Slider } from "rsuite";
 import "./slider.less";
-import audi1 from "../components/audio1.wav";
-import audi2 from "../components/audio/audio2.wav";
-import audi3 from "../components/audio/audio3.wav";
 
 function Number({ n }) {
   const { number } = useSpring({
@@ -18,11 +15,7 @@ function Number({ n }) {
   return <animated.div>{number.to((n) => n.toFixed(0))}</animated.div>;
 }
 
-function Exer2({ list }) {
-  let audio1 = new Audio(audi1);
-  let audio2 = new Audio(audi2);
-  let audio3 = new Audio(audi3);
-
+function Exer2({ list, pylan }) {
   const [lang, setLang] = useState("eng");
   const [voiceChoice, setVoiceChoice] = useState("one");
   const [volumeAct, setVolumeAct] = useState(false);
@@ -52,15 +45,7 @@ function Exer2({ list }) {
   };
 
   const chooseAudio = (e) => {
-    if (e == "one") {
-      audio1.play();
-    }
-    if (e == "two") {
-      audio2.play();
-    }
-    if (e == "three") {
-      audio3.play();
-    }
+    pylan[e].play();
     setAudio(e);
     setVoiceChoice(e);
   };
@@ -83,24 +68,24 @@ function Exer2({ list }) {
           </Link>
           <div className="optionPanel">
             <span onClick={() => handleLanguage()} className="languagePanel">
-              <span>{lang == "eng" ? "Eng" : "Ru"}</span>
+              <span>{lang === "eng" ? "Eng" : "Ru"}</span>
             </span>
             <div className="audioPanel">
               <span
                 onClick={() => handleVolumeAct()}
                 className={
-                  voiceChoice == "three"
+                  voiceChoice === "three"
                     ? "volume thirdVoice"
-                    : voiceChoice == "four"
+                    : voiceChoice === "four"
                     ? "volume fourthVoice"
-                    : voiceChoice == "two"
+                    : voiceChoice === "two"
                     ? "volume secondVoice"
                     : "volume firstVoice"
                 }
               ></span>
               <ul
                 className={
-                  volumeAct == true ? "volumeList volActive" : "volumeList"
+                  volumeAct === true ? "volumeList volActive" : "volumeList"
                 }
               >
                 {list.map((item) => (
@@ -121,7 +106,7 @@ function Exer2({ list }) {
               ></div>
               <div
                 className={
-                  volPanel == false
+                  volPanel === false
                     ? "slide_line_volume"
                     : "slide_line_volume visActive"
                 }
