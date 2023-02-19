@@ -8,7 +8,7 @@ import audi3 from "../components/audio/audio3.wav";
 import { Slider } from "rsuite";
 import "./slider.less";
 
-function Main() {
+function Main({ list }) {
   const [lang, setLang] = useState("eng");
   const [voiceChoice, setVoiceChoice] = useState("one");
   const [volumeAct, setVolumeAct] = useState(false);
@@ -79,30 +79,14 @@ function Main() {
                   volumeAct == true ? "volumeList volActive" : "volumeList"
                 }
               >
-                <li>
-                  <span
-                    onClick={() => chooseAudio("one")}
-                    className="voices firstVoice"
-                  ></span>
-                </li>
-                <li>
-                  <span
-                    onClick={() => chooseAudio("two")}
-                    className="voices secondVoice"
-                  ></span>
-                </li>
-                <li>
-                  <span
-                    onClick={() => chooseAudio("three")}
-                    className="voices thirdVoice"
-                  ></span>
-                </li>
-                <li>
-                  <span
-                    onClick={() => chooseAudio("four")}
-                    className="voices fourthVoice"
-                  ></span>
-                </li>
+                {list.map((item) => (
+                  <li>
+                    <span
+                      onClick={() => chooseAudio(item.num)}
+                      className={item.class}
+                    ></span>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="volumeWrapper">

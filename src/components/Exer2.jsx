@@ -4,6 +4,9 @@ import { Link, Outlet, useNavigate } from "react-router-dom";
 import { useSpring, animated } from "react-spring";
 import { Slider } from "rsuite";
 import "./slider.less";
+import audi1 from "../components/audio1.wav";
+import audi2 from "../components/audio/audio2.wav";
+import audi3 from "../components/audio/audio3.wav";
 
 function Number({ n }) {
   const { number } = useSpring({
@@ -15,12 +18,18 @@ function Number({ n }) {
   return <animated.div>{number.to((n) => n.toFixed(0))}</animated.div>;
 }
 
-function Exer2() {
+function Exer2({ list }) {
+  let audio1 = new Audio(audi1);
+  let audio2 = new Audio(audi2);
+  let audio3 = new Audio(audi3);
+
   const [lang, setLang] = useState("eng");
   const [voiceChoice, setVoiceChoice] = useState("one");
   const [volumeAct, setVolumeAct] = useState(false);
   const [volPanel, setVolPanel] = useState(false);
   const [slideValue, setSlideValue] = useState(0);
+
+  const [audio, setAudio] = useState("one");
 
   let langArr = true;
 
@@ -40,6 +49,20 @@ function Exer2() {
       setLang("eng");
       langArr = !langArr;
     }
+  };
+
+  const chooseAudio = (e) => {
+    if (e == "one") {
+      audio1.play();
+    }
+    if (e == "two") {
+      audio2.play();
+    }
+    if (e == "three") {
+      audio3.play();
+    }
+    setAudio(e);
+    setVoiceChoice(e);
   };
 
   const handleChange = (event, newValue) => {
@@ -80,30 +103,14 @@ function Exer2() {
                   volumeAct == true ? "volumeList volActive" : "volumeList"
                 }
               >
-                <li>
-                  <span
-                    onClick={() => setVoiceChoice("one")}
-                    className="close voices firstVoice"
-                  ></span>
-                </li>
-                <li>
-                  <span
-                    onClick={() => setVoiceChoice("two")}
-                    className="close voices secondVoice"
-                  ></span>
-                </li>
-                <li>
-                  <span
-                    onClick={() => setVoiceChoice("three")}
-                    className="close voices thirdVoice"
-                  ></span>
-                </li>
-                <li>
-                  <span
-                    onClick={() => setVoiceChoice("four")}
-                    className="close voices fourthVoice"
-                  ></span>
-                </li>
+                {list.map((item) => (
+                  <li>
+                    <span
+                      onClick={() => chooseAudio(item.num)}
+                      className={item.class}
+                    ></span>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="volumeWrapper">

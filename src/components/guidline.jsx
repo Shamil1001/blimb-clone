@@ -3,14 +3,22 @@ import guid from "./guidline.css";
 import { Link, Outlet } from "react-router-dom";
 import { Slider } from "rsuite";
 import "./slider.less";
+import audi1 from "../components/audio1.wav";
+import audi2 from "../components/audio/audio2.wav";
+import audi3 from "../components/audio/audio3.wav";
 
-//Same issues!!!
-function Guidline() {
+function Guidline({ list }) {
+  let audio1 = new Audio(audi1);
+  let audio2 = new Audio(audi2);
+  let audio3 = new Audio(audi3);
+
   const [lang, setLang] = useState("eng");
   const [voiceChoice, setVoiceChoice] = useState("one");
   const [volumeAct, setVolumeAct] = useState(false);
   const [volPanel, setVolPanel] = useState(false);
   const [slideValue, setSlideValue] = useState(0);
+
+  const [audio, setAudio] = useState("one");
 
   let aTest = new Audio("./audio1.wav");
 
@@ -34,6 +42,20 @@ function Guidline() {
   const handleVolumeAct = () => {
     aTest.play();
     setVolumeAct(!volumeAct);
+  };
+
+  const chooseAudio = (e) => {
+    if (e == "one") {
+      audio1.play();
+    }
+    if (e == "two") {
+      audio2.play();
+    }
+    if (e == "three") {
+      audio3.play();
+    }
+    setAudio(e);
+    setVoiceChoice(e);
   };
 
   return (
@@ -65,31 +87,14 @@ function Guidline() {
                   volumeAct == true ? "volumeList volActive" : "volumeList"
                 }
               >
-                {/* Dont repeat yourself, Use map function */}
-                <li>
-                  <span
-                    onClick={() => setVoiceChoice("one")}
-                    className="close voices firstVoice"
-                  ></span>
-                </li>
-                <li>
-                  <span
-                    onClick={() => setVoiceChoice("two")}
-                    className="close voices secondVoice"
-                  ></span>
-                </li>
-                <li>
-                  <span
-                    onClick={() => setVoiceChoice("three")}
-                    className="close voices thirdVoice"
-                  ></span>
-                </li>
-                <li>
-                  <span
-                    onClick={() => setVoiceChoice("four")}
-                    className="close voices fourthVoice"
-                  ></span>
-                </li>
+                {list.map((item) => (
+                  <li>
+                    <span
+                      onClick={() => chooseAudio(item.num)}
+                      className={item.class}
+                    ></span>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="volumeWrapper">

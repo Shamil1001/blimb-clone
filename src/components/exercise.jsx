@@ -20,7 +20,7 @@ function Number({ n }) {
   return <animated.div>{number.to((n) => n.toFixed(0))}</animated.div>;
 }
 
-function Exercise() {
+function Exercise({ list }) {
   let audio1 = new Audio(audi1);
   let audio2 = new Audio(audi2);
   let audio3 = new Audio(audi3);
@@ -115,31 +115,14 @@ function Exercise() {
                   volumeAct == true ? "volumeList volActive" : "volumeList"
                 }
               >
-                {/* Dont repeat yourself */}
-                <li>
-                  <span
-                    onClick={() => chooseAudio("one")}
-                    className="voices firstVoice"
-                  ></span>
-                </li>
-                <li>
-                  <span
-                    onClick={() => chooseAudio("two")}
-                    className="voices secondVoice"
-                  ></span>
-                </li>
-                <li>
-                  <span
-                    onClick={() => chooseAudio("three")}
-                    className="voices thirdVoice"
-                  ></span>
-                </li>
-                <li>
-                  <span
-                    onClick={() => chooseAudio("four")}
-                    className="voices fourthVoice"
-                  ></span>
-                </li>
+                {list.map((item) => (
+                  <li>
+                    <span
+                      onClick={() => chooseAudio(item.num)}
+                      className={item.class}
+                    ></span>
+                  </li>
+                ))}
               </ul>
             </div>
             <div className="volumeWrapper">
