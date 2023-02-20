@@ -1,24 +1,19 @@
 {
   "files": {
-    "main.css": "/blimb-clone/static/css/main.ba16635e.css",
-    "main.js": "/blimb-clone/static/js/main.602c1c77.js",
+    "main.css": "/blimb-clone/static/css/main.9fb637b4.css",
+    "main.js": "/blimb-clone/static/js/main.96c376e8.js",
     "static/js/787.5480e000.chunk.js": "/blimb-clone/static/js/787.5480e000.chunk.js",
     "static/media/audio3.wav": "/blimb-clone/static/media/audio3.4b92e28ef11651457ad7.wav",
-    "static/media/fontawesome-webfont.svg?v=4.7.0": "/blimb-clone/static/media/fontawesome-webfont.c1e38fd9e0e74ba58f7a.svg",
     "static/media/audio2.wav": "/blimb-clone/static/media/audio2.673b0c74ea6970544711.wav",
     "static/media/audio1.wav": "/blimb-clone/static/media/audio1.86bb748b22190001ec6c.wav",
-    "static/media/fontawesome-webfont.eot": "/blimb-clone/static/media/fontawesome-webfont.8b43027f47b20503057d.eot",
-    "static/media/fontawesome-webfont.ttf?v=4.7.0": "/blimb-clone/static/media/fontawesome-webfont.1e59d2330b4c6deb84b3.ttf",
-    "static/media/fontawesome-webfont.woff?v=4.7.0": "/blimb-clone/static/media/fontawesome-webfont.f691f37e57f04c152e23.woff",
-    "static/media/fontawesome-webfont.woff2?v=4.7.0": "/blimb-clone/static/media/fontawesome-webfont.20fd1704ea223900efa9.woff2",
     "index.html": "/blimb-clone/index.html",
     "static/media/slider.less": "/blimb-clone/static/media/slider.541f41733690e0e34efb.less",
-    "main.ba16635e.css.map": "/blimb-clone/static/css/main.ba16635e.css.map",
-    "main.602c1c77.js.map": "/blimb-clone/static/js/main.602c1c77.js.map",
+    "main.9fb637b4.css.map": "/blimb-clone/static/css/main.9fb637b4.css.map",
+    "main.96c376e8.js.map": "/blimb-clone/static/js/main.96c376e8.js.map",
     "787.5480e000.chunk.js.map": "/blimb-clone/static/js/787.5480e000.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ba16635e.css",
-    "static/js/main.602c1c77.js"
+    "static/css/main.9fb637b4.css",
+    "static/js/main.96c376e8.js"
   ]
 }
