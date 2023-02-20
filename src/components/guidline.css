@@ -243,6 +243,7 @@ ul {
 }
 .navyGuid .btn {
   margin-top: 20px;
+  text-align: center;
   border: 2px solid white;
   width: 30%;
   border-radius: 50px;

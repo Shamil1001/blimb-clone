@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // import "./App.css";
 // import "./index.css";
 import Main from "./components/main";
@@ -28,25 +28,70 @@ function App() {
     three: audio3,
   };
 
+  let langArr = true;
+  const [lang, setLang] = useState("eng");
+
+  const handleLanguage = () => {
+    if (langArr) {
+      setLang("ru");
+      langArr = !langArr;
+    } else {
+      setLang("eng");
+      langArr = !langArr;
+    }
+  };
+
   return (
     <>
       <Routes>
-        <Route exact path="*" element={<Main list={list} pylan={pylan} />} />
+        <Route
+          exact
+          path="*"
+          element={
+            <Main
+              list={list}
+              pylan={pylan}
+              handleLanguage={handleLanguage}
+              lang={lang}
+            />
+          }
+        />
 
         <Route
           exact
           path="/guid/"
-          element={<Guidline list={list} pylan={pylan} />}
+          element={
+            <Guidline
+              list={list}
+              pylan={pylan}
+              handleLanguage={handleLanguage}
+              lang={lang}
+            />
+          }
         ></Route>
         <Route
           exact
           path="/exercise/"
-          element={<Exercise list={list} pylan={pylan} />}
+          element={
+            <Exercise
+              list={list}
+              pylan={pylan}
+              handleLanguage={handleLanguage}
+              lang={lang}
+            />
+          }
         ></Route>
         <Route
           exact
           path="/exer2/"
-          element={<Exer2 list={list} pylan={pylan} />}
+          element={
+            <Exer2
+              list={list}
+              pylan={pylan}
+              handleLanguage={handleLanguage}
+              lang={lang}
+            />
+          }
         ></Route>
       </Routes>
     </>
