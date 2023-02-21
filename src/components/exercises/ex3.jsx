@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import "./exercise.css";
 import { Outlet, useNavigate } from "react-router-dom";
 import { useSpring, animated } from "react-spring";
-import Navbar2 from "./navBar2";
+import Navbar2 from "../navBar2";
 
 function Number({ n }) {
   const { number } = useSpring({
@@ -14,18 +14,18 @@ function Number({ n }) {
   return <animated.div>{number.to((n) => n.toFixed(0))}</animated.div>;
 }
 
-function Exercise({ list, pylan, handleLanguage, lang }) {
-  const [voiceChoice, setVoiceChoice] = useState("one");
-  const [audio, setAudio] = useState("one");
-
+function Exer3({ list, pylan, handleLanguage, lang }) {
   const navigate = useNavigate();
+
+  const clipLang = [
+    { eng: "Clip", rus: "" },
+    { eng: "Blinked or hands close your eyes", rus: "" },
+  ];
 
   useEffect(() => {
     setTimeout(() => {
-      pylan[voiceChoice].play();
-      console.log(audio);
-      navigate("/exer2");
-    }, 16000);
+      navigate("/exer4/");
+    }, 18000);
   }, []);
 
   return (
@@ -38,11 +38,12 @@ function Exercise({ list, pylan, handleLanguage, lang }) {
           handleLanguage={handleLanguage}
         />
         <div className="navyExer">
-          <h1 className="guidTitle">Relax</h1>
+          <h1 className="guidTitle">{lang == "eng" ? clipLang[0].eng : ""}</h1>
           <h1>
-            <Number n={15} />
+            <Number n={20} />
           </h1>
-          <span class="engl">Close your eyes until you hear a signal</span>
+          <span className="engl">{lang == "eng" ? clipLang[1].eng : ""}</span>
+          {/* <div class="box"></div> */}
         </div>
         <div className="footer">
           <div className="social"></div>
@@ -53,4 +54,4 @@ function Exercise({ list, pylan, handleLanguage, lang }) {
   );
 }
 
-export default Exercise;
+export default Exer3;

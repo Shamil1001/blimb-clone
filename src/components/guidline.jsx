@@ -4,7 +4,16 @@ import { Link, Outlet } from "react-router-dom";
 import "./slider.less";
 import Navbar2 from "./navBar2";
 
-function Guidline({ list, pylan, handleLanguage, lang }) {
+function Guidline({
+  list,
+  pylan,
+  handleLanguage,
+  lang,
+  chooseAudio,
+  voiceChoice,
+  slideValue,
+  handleChange,
+}) {
   return (
     <>
       <div className="main">
@@ -13,6 +22,10 @@ function Guidline({ list, pylan, handleLanguage, lang }) {
           pylan={pylan}
           lang={lang}
           handleLanguage={handleLanguage}
+          chooseAudio={chooseAudio}
+          voiceChoice={voiceChoice}
+          slideValue={slideValue}
+          handleChange={handleChange}
         />
         <div className="navyGuid">
           <h1 className="guidTitle">Guidelines</h1>

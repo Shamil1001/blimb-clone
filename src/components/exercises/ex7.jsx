@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import "./exercise.css";
 import { Outlet, useNavigate } from "react-router-dom";
 import { useSpring, animated } from "react-spring";
-import Navbar2 from "./navBar2";
+import Navbar2 from "../navBar2";
 
 function Number({ n }) {
   const { number } = useSpring({
@@ -14,12 +14,17 @@ function Number({ n }) {
   return <animated.div>{number.to((n) => n.toFixed(0))}</animated.div>;
 }
 
-function Exer2({ list, pylan, handleLanguage, lang }) {
+function Exer7({ list, pylan, handleLanguage, lang }) {
   const navigate = useNavigate();
+
+  const clockWise = [
+    { eng: "Clockwise direction", rus: "" },
+    { eng: "Do not hurry, do it smoothly", rus: "" },
+  ];
 
   useEffect(() => {
     setTimeout(() => {
-      navigate("/");
+      navigate("/exer8/");
     }, 18000);
   }, []);
 
@@ -33,13 +38,12 @@ function Exer2({ list, pylan, handleLanguage, lang }) {
           handleLanguage={handleLanguage}
         />
         <div className="navyExer">
-          <h1 className="guidTitle">Up-down</h1>
+          <h1 className="guidTitle">{lang == "eng" ? clockWise[0].eng : ""}</h1>
           <h1>
             <Number n={20} />
           </h1>
-          <span class="engl">
-            For a second old your eyes in the upper and low points
-          </span>
+          <span className="engl">{lang == "eng" ? clockWise[1].eng : ""}</span>
+          <div className="box7"></div>
         </div>
         <div className="footer">
           <div className="social"></div>
@@ -50,4 +54,4 @@ function Exer2({ list, pylan, handleLanguage, lang }) {
   );
 }
 
-export default Exer2;
+export default Exer7;

@@ -3,26 +3,22 @@ import "./main.css";
 import { Link, Outlet } from "react-router-dom";
 import { Slider } from "rsuite";
 import "./slider.less";
-import Footer from "./footer";
 
-function Navbar({ list, pylan, handleLanguage, lang }) {
-  const [voiceChoice, setVoiceChoice] = useState("one");
+function Navbar({
+  list,
+  pylan,
+  handleLanguage,
+  lang,
+  voiceChoice,
+  chooseAudio,
+  handleChange,
+  slideValue,
+}) {
   const [volumeAct, setVolumeAct] = useState(false);
   const [volPanel, setVolPanel] = useState(false);
-  const [slideValue, setSlideValue] = useState(0);
-
-  const handleChange = (newValue) => {
-    console.log(newValue);
-    setSlideValue(newValue);
-  };
 
   const handleVolumeAct = () => {
     setVolumeAct(!volumeAct);
-  };
-
-  const chooseAudio = (e) => {
-    pylan[e].play();
-    setVoiceChoice(e);
   };
 
   return (
@@ -79,7 +75,7 @@ function Navbar({ list, pylan, handleLanguage, lang }) {
                 value={slideValue}
                 progress
                 vertical
-                onChange={() => handleChange()}
+                onChange={(e) => handleChange(e)}
               />
             </div>
           </div>

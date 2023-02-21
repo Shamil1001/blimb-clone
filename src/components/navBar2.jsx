@@ -4,24 +4,21 @@ import { Link, Outlet } from "react-router-dom";
 import { Slider } from "rsuite";
 import "./slider.less";
 
-function Navbar2({ list, pylan, handleLanguage, lang }) {
-  const [voiceChoice, setVoiceChoice] = useState("one");
+function Navbar2({
+  list,
+  pylan,
+  handleLanguage,
+  lang,
+  chooseAudio,
+  voiceChoice,
+  slideValue,
+  handleChange,
+}) {
   const [volumeAct, setVolumeAct] = useState(false);
   const [volPanel, setVolPanel] = useState(false);
-  const [slideValue, setSlideValue] = useState(0);
-
-  const handleChange = (newValue) => {
-    console.log(newValue);
-    setSlideValue(newValue);
-  };
 
   const handleVolumeAct = () => {
     setVolumeAct(!volumeAct);
-  };
-
-  const chooseAudio = (e) => {
-    pylan[e].play();
-    setVoiceChoice(e);
   };
 
   return (
