@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/blimb-clone/static/css/main.9fb637b4.css",
-    "main.js": "/blimb-clone/static/js/main.96c376e8.js",
+    "main.css": "/blimb-clone/static/css/main.d318e1ae.css",
+    "main.js": "/blimb-clone/static/js/main.a911dff7.js",
     "static/js/787.5480e000.chunk.js": "/blimb-clone/static/js/787.5480e000.chunk.js",
     "static/media/audio3.wav": "/blimb-clone/static/media/audio3.4b92e28ef11651457ad7.wav",
     "static/media/audio2.wav": "/blimb-clone/static/media/audio2.673b0c74ea6970544711.wav",
     "static/media/audio1.wav": "/blimb-clone/static/media/audio1.86bb748b22190001ec6c.wav",
     "index.html": "/blimb-clone/index.html",
     "static/media/slider.less": "/blimb-clone/static/media/slider.541f41733690e0e34efb.less",
-    "main.9fb637b4.css.map": "/blimb-clone/static/css/main.9fb637b4.css.map",
-    "main.96c376e8.js.map": "/blimb-clone/static/js/main.96c376e8.js.map",
+    "main.d318e1ae.css.map": "/blimb-clone/static/css/main.d318e1ae.css.map",
+    "main.a911dff7.js.map": "/blimb-clone/static/js/main.a911dff7.js.map",
     "787.5480e000.chunk.js.map": "/blimb-clone/static/js/787.5480e000.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9fb637b4.css",
-    "static/js/main.96c376e8.js"
+    "static/css/main.d318e1ae.css",
+    "static/js/main.a911dff7.js"
   ]
 }
