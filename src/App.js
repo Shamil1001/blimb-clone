@@ -62,6 +62,7 @@ function App() {
     one: audio1,
     two: audio2,
     three: audio3,
+    four: audio2,
   };
 
   const [langArr, setLangArr] = useState(true);

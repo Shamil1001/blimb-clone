@@ -39,7 +39,6 @@ function Exercise({
 
   useEffect(() => {
     setTimeout(() => {
-      pylan[voiceChoice].volume = slideValue / 100;
       pylan[voiceChoice].play();
       // console.log(audio);
       navigate("/exer2");

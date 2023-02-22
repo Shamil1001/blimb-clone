@@ -39,7 +39,7 @@ function Exer12({
       pylan[voiceChoice].volume = slideValue / 100;
       pylan[voiceChoice].play();
       navigate("/");
-    }, 18000);
+    }, 5000);
   }, []);
 
   return (
@@ -59,9 +59,9 @@ function Exer12({
           <h1 className="guidTitle">
             {lang === "eng" ? wellDone[0].eng : wellDone[0].rus}
           </h1>
-          <h1>
+          {/* <h1>
             <Number n={20} />
-          </h1>
+          </h1> */}
           <span className="engl">
             {lang === "eng" ? wellDone[1].eng : wellDone[1].rus}
           </span>

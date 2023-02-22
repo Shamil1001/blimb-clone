@@ -4,7 +4,6 @@ import { Link, Outlet } from "react-router-dom";
 import "./slider.less";
 import Footer from "./footer";
 import Navbar from "./navbarMain";
-import { motion } from "framer-motion";
 
 function Main({
   list,
@@ -44,7 +43,12 @@ function Main({
           </h1>
 
           <div className="nav">
-            <span>{lang === "eng" ? "Guidlines" : "Рекомендации"}</span>
+            <Link
+              to="https://blimb.su/about/"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              <span>{lang === "eng" ? "Guidlines" : "Рекомендации"}</span>
+            </Link>
           </div>
           <div className="box"></div>
         </div>

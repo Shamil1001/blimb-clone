@@ -77,7 +77,7 @@ function Navbar2({
                 value={slideValue}
                 progress
                 vertical
-                onChange={() => handleChange()}
+                onChange={(e) => handleChange(e)}
               />
             </div>
           </div>

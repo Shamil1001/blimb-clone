@@ -54,14 +54,27 @@ function Guidline({
           <div>
             <span>Total time of the exercise: 3 minutes 25 seconds.</span>
           </div>
-          <Link
-            to="/exercise/"
-            style={{ color: "white", textDecoration: "none" }}
-          >
-            <div className="btn">
-              <h2>Start</h2>
+          <div className="input-btn">
+            <div>
+              <input
+                className="form-check-input"
+                type="checkbox"
+                value=""
+                id="flexCheckDefault"
+              ></input>
+              <label className="form-check-label">
+                Do not show me this again
+              </label>
             </div>
-          </Link>
+            <Link
+              to="/exercise/"
+              style={{ color: "white", textDecoration: "none" }}
+            >
+              <div className="btn">
+                <h4>Start</h4>
+              </div>
+            </Link>
+          </div>
         </div>
         <div className="footer">
           <div className="social"></div>
