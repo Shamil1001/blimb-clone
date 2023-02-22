@@ -36,6 +36,7 @@ function Exer8({
 
   useEffect(() => {
     setTimeout(() => {
+      pylan[voiceChoice].volume = slideValue / 100;
       pylan[voiceChoice].play();
       navigate("/exer9/");
     }, 18000);
