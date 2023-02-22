@@ -36,6 +36,7 @@ function Exer12({
 
   useEffect(() => {
     setTimeout(() => {
+      pylan[voiceChoice].play();
       navigate("/");
     }, 18000);
   }, []);
@@ -55,13 +56,13 @@ function Exer12({
         />
         <div className="navyExer">
           <h1 className="guidTitle">
-            {lang == "eng" ? wellDone[0].eng : wellDone[0].rus}
+            {lang === "eng" ? wellDone[0].eng : wellDone[0].rus}
           </h1>
           <h1>
             <Number n={20} />
           </h1>
           <span className="engl">
-            {lang == "eng" ? wellDone[1].eng : wellDone[1].rus}
+            {lang === "eng" ? wellDone[1].eng : wellDone[1].rus}
           </span>
         </div>
         <div className="footer">

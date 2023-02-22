@@ -33,6 +33,7 @@ function Exer7({
 
   useEffect(() => {
     setTimeout(() => {
+      pylan[voiceChoice].play();
       navigate("/exer8/");
     }, 18000);
   }, []);
@@ -52,13 +53,13 @@ function Exer7({
         />
         <div className="navyExer">
           <h1 className="guidTitle">
-            {lang == "eng" ? clockWise[0].eng : clockWise[0].rus}
+            {lang === "eng" ? clockWise[0].eng : clockWise[0].rus}
           </h1>
           <h1>
             <Number n={20} />
           </h1>
           <span className="engl">
-            {lang == "eng" ? clockWise[1].eng : clockWise[1].rus}
+            {lang === "eng" ? clockWise[1].eng : clockWise[1].rus}
           </span>
           <div className="box7"></div>
         </div>

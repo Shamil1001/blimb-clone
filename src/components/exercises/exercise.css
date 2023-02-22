@@ -14,7 +14,7 @@
   border-radius: 50%;
   margin: auto;
   position: absolute;
-  top: -180%;
+  top: -160%;
   left: 48%;
   background-color: white;
   opacity: 50%;
@@ -28,7 +28,7 @@
   }
   25% {
     opacity: 50%;
-    top: 250%;
+    top: 200%;
   }
   50% {
     opacity: 50%;
@@ -36,7 +36,7 @@
   }
   75% {
     opacity: 100%;
-    top: 250%;
+    top: 200%;
   }
 }
 

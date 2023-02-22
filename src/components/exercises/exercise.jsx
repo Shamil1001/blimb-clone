@@ -60,13 +60,13 @@ function Exercise({
         />
         <div className="navyExer">
           <h1 className="guidTitle">
-            {lang == "eng" ? relax[0].eng : relax[0].rus}
+            {lang === "eng" ? relax[0].eng : relax[0].rus}
           </h1>
           <h1>
             <Number n={15} />
           </h1>
           <span className="engl">
-            {lang == "eng" ? relax[1].eng : relax[1].rus}
+            {lang === "eng" ? relax[1].eng : relax[1].rus}
           </span>
         </div>
         <div className="box1"></div>

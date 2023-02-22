@@ -36,6 +36,7 @@ function Exer5({
 
   useEffect(() => {
     setTimeout(() => {
+      pylan[voiceChoice].play();
       navigate("/exer6/");
     }, 18000);
   }, []);
@@ -55,13 +56,13 @@ function Exer5({
         />
         <div className="navyExer">
           <h1 className="guidTitle">
-            {lang == "eng" ? diagonal[0].eng : diagonal[0].rus}
+            {lang === "eng" ? diagonal[0].eng : diagonal[0].rus}
           </h1>
           <h1>
             <Number n={20} />
           </h1>
           <span className="engl">
-            {lang == "eng" ? diagonal[1].eng : diagonal[1].rus}
+            {lang === "eng" ? diagonal[1].eng : diagonal[1].rus}
           </span>
           <div className="box5"></div>
         </div>
