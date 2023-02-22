@@ -24,7 +24,7 @@ function App() {
   let audio3 = new Audio(audi3);
 
   const [voiceChoice, setVoiceChoice] = useState("one");
-  const [slideValue, setSlideValue] = useState(0);
+  const [slideValue, setSlideValue] = useState(50);
 
   const handleChange = (newValue) => {
     console.log(newValue);
@@ -123,6 +123,10 @@ function App() {
                 pylan={pylan}
                 handleLanguage={handleLanguage}
                 lang={lang}
+                chooseAudio={chooseAudio}
+                voiceChoice={voiceChoice}
+                slideValue={slideValue}
+                handleChange={handleChange}
               />
             }
           ></Route>

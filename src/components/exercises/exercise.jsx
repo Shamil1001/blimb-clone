@@ -14,9 +14,18 @@ function Number({ n }) {
   return <animated.div>{number.to((n) => n.toFixed(0))}</animated.div>;
 }
 
-function Exercise({ list, pylan, handleLanguage, lang }) {
-  const [voiceChoice, setVoiceChoice] = useState("one");
-  const [audio, setAudio] = useState("one");
+function Exercise({
+  list,
+  pylan,
+  handleLanguage,
+  lang,
+  voiceChoice,
+  chooseAudio,
+  slideValue,
+  handleChange,
+}) {
+  // const [voiceChoice, setVoiceChoice] = useState("one");
+  // const [audio, setAudio] = useState("one");
 
   const relax = [
     { eng: "Relax", rus: "Расслабьтесь" },
@@ -31,7 +40,7 @@ function Exercise({ list, pylan, handleLanguage, lang }) {
   useEffect(() => {
     setTimeout(() => {
       pylan[voiceChoice].play();
-      console.log(audio);
+      // console.log(audio);
       navigate("/exer2");
     }, 16000);
   }, []);
@@ -44,6 +53,10 @@ function Exercise({ list, pylan, handleLanguage, lang }) {
           pylan={pylan}
           lang={lang}
           handleLanguage={handleLanguage}
+          voiceChoice={voiceChoice}
+          chooseAudio={chooseAudio}
+          slideValue={slideValue}
+          handleChange={handleChange}
         />
         <div className="navyExer">
           <h1 className="guidTitle">

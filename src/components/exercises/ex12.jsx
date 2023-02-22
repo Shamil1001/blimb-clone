@@ -14,7 +14,16 @@ function Number({ n }) {
   return <animated.div>{number.to((n) => n.toFixed(0))}</animated.div>;
 }
 
-function Exer12({ list, pylan, handleLanguage, lang }) {
+function Exer12({
+  list,
+  pylan,
+  handleLanguage,
+  lang,
+  voiceChoice,
+  chooseAudio,
+  slideValue,
+  handleChange,
+}) {
   const navigate = useNavigate();
 
   const wellDone = [
@@ -39,6 +48,10 @@ function Exer12({ list, pylan, handleLanguage, lang }) {
           pylan={pylan}
           lang={lang}
           handleLanguage={handleLanguage}
+          voiceChoice={voiceChoice}
+          chooseAudio={chooseAudio}
+          slideValue={slideValue}
+          handleChange={handleChange}
         />
         <div className="navyExer">
           <h1 className="guidTitle">
