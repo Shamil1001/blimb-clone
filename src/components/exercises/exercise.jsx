@@ -19,8 +19,11 @@ function Exercise({ list, pylan, handleLanguage, lang }) {
   const [audio, setAudio] = useState("one");
 
   const relax = [
-    { eng: "Relax", rus: "" },
-    { eng: "Close your eyes until you hear a signal", rus: "" },
+    { eng: "Relax", rus: "Расслабьтесь" },
+    {
+      eng: "Close your eyes until you hear a signal",
+      rus: "Закройте глаза до сигнала",
+    },
   ];
 
   const navigate = useNavigate();

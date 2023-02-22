@@ -64,16 +64,16 @@ function App() {
     three: audio3,
   };
 
-  let langArr = true;
+  const [langArr, setLangArr] = useState(true);
   const [lang, setLang] = useState("eng");
 
   const handleLanguage = () => {
     if (langArr) {
+      setLangArr(!langArr);
       setLang("ru");
-      langArr = !langArr;
     } else {
+      setLangArr(!langArr);
       setLang("eng");
-      langArr = !langArr;
     }
   };
 
