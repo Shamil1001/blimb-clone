@@ -64,6 +64,7 @@ function Exer8({
           <span className="engl">
             {lang === "eng" ? spiral[1].eng : spiral[1].rus}
           </span>
+          <div className="boxS"></div>
         </div>
         <div className="footer">
           <div className="social"></div>

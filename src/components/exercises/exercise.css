@@ -7,6 +7,26 @@
   text-align: center;
 }
 
+/* clockwise */
+/* .box {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  border-radius: 50%;
+  margin: auto;
+  background-color: white;
+  opacity: 50%;
+  animation: exam 6s infinite;
+} */
+
+/* @keyframes exam {
+  0% {
+    transform: rotate(720deg) translateX(250px) translateY(250px) rotate(720deg);
+  }
+} */
+
 /* up-down */
 .box2 {
   width: 30px;
@@ -163,5 +183,25 @@
   }
   100% {
     transform: rotate(-45deg) scale(0.8);
+  }
+}
+
+/* spiral */
+.boxS {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  border-radius: 50%;
+  margin: auto;
+  background-color: white;
+  opacity: 50%;
+  animation: exam 6s infinite;
+}
+
+@keyframes exam {
+  0% {
+    transform: rotate(720deg) translateX(250px) translateY(250px) rotate(720deg);
   }
 }
