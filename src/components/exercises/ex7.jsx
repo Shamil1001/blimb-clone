@@ -18,8 +18,8 @@ function Exer7({ list, pylan, handleLanguage, lang }) {
   const navigate = useNavigate();
 
   const clockWise = [
-    { eng: "Clockwise direction", rus: "" },
-    { eng: "Do not hurry, do it smoothly", rus: "" },
+    { eng: "Clockwise direction", rus: "По часовой стрелке" },
+    { eng: "Do not hurry, do it smoothly", rus: "Не спешите, делайте плавно" },
   ];
 
   useEffect(() => {

@@ -18,10 +18,10 @@ function Exer10({ list, pylan, handleLanguage, lang }) {
   const navigate = useNavigate();
 
   const distance = [
-    { eng: "Into the distance", rus: "" },
+    { eng: "Into the distance", rus: "Вблизи-вдали" },
     {
       eng: "Look at the object in the distance, then at the objects near you",
-      rus: "",
+      rus: "Посмотрите на предмет вдали, потом — на монитор",
     },
   ];
 

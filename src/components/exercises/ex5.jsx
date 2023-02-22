@@ -18,8 +18,11 @@ function Exer5({ list, pylan, handleLanguage, lang }) {
   const navigate = useNavigate();
 
   const diagonal = [
-    { eng: "Along the diagonal", rus: "" },
-    { eng: "Look at the corners, as the dot shows you", rus: "" },
+    { eng: "Along the diagonal", rus: "По диагонали" },
+    {
+      eng: "Look at the corners, as the dot shows you",
+      rus: "Смотрите по углам, точка покажет как",
+    },
   ];
 
   useEffect(() => {

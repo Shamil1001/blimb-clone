@@ -18,10 +18,10 @@ function Exer12({ list, pylan, handleLanguage, lang }) {
   const navigate = useNavigate();
 
   const wellDone = [
-    { eng: "Well done", rus: "" },
+    { eng: "Well done", rus: "Вы молодец!" },
     {
       eng: "Well Done! Now get some rest from the computer. If you do not close the window, we remind you the rest in an hour",
-      rus: "",
+      rus: "Вы молодец! Теперь немного отдохните от компьютера. Если не закроете вкладку, через час мы вам напомним про отдых.",
     },
   ];
 

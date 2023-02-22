@@ -18,8 +18,11 @@ function Exer6({ list, pylan, handleLanguage, lang }) {
   const navigate = useNavigate();
 
   const clipLang = [
-    { eng: "Clip", rus: "" },
-    { eng: "Blinked or hands close your eyes", rus: "" },
+    { eng: "Clip", rus: "Помигайте глазами" },
+    {
+      eng: "Blinked or hands close your eyes",
+      rus: "Помигайте глазами или прикройте ладонями до сигнала",
+    },
   ];
 
   useEffect(() => {

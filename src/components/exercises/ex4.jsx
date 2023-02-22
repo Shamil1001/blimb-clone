@@ -18,10 +18,10 @@ function Exer4({ list, pylan, handleLanguage, lang }) {
   const navigate = useNavigate();
 
   const LeftRight = [
-    { eng: "Left-Right", rus: "" },
+    { eng: "Left-Right", rus: "Влево−вправо" },
     {
       eng: "Move your eyes as much as possible left and right, but by doing this you should not feel any discomfort",
-      rus: "",
+      rus: "До упора, но без сильного напряжения",
     },
   ];
 

@@ -18,8 +18,11 @@ function Exer2({ list, pylan, handleLanguage, lang }) {
   const navigate = useNavigate();
 
   const upDown = [
-    { eng: "Up-down", rus: "" },
-    { eng: "For a second old your eyes in the upper and low points", rus: "" },
+    { eng: "Up-down", rus: "Вверх−вниз" },
+    {
+      eng: "For a second old your eyes in the upper and low points",
+      rus: "На секунду задерживайте взгляд в верхней и нижней точках",
+    },
   ];
 
   useEffect(() => {

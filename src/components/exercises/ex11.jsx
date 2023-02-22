@@ -18,7 +18,7 @@ function Exer11({ list, pylan, handleLanguage, lang }) {
   const navigate = useNavigate();
 
   const relax = [
-    { eng: "Relax", rus: "" },
+    { eng: "Relax", rus: "Расслабьтесь" },
     { eng: "Close your eyes you are almost finished", rus: "" },
   ];
 

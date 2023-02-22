@@ -18,8 +18,11 @@ function Exer8({ list, pylan, handleLanguage, lang }) {
   const navigate = useNavigate();
 
   const spiral = [
-    { eng: "Spirally", rus: "" },
-    { eng: "Try to do no less than 4 turns", rus: "" },
+    { eng: "Spirally", rus: "По спирали" },
+    {
+      eng: "Try to do no less than 4 turns",
+      rus: "Старайтесь делать не меньше четырёх витков",
+    },
   ];
 
   useEffect(() => {
