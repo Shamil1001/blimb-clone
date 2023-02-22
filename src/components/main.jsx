@@ -50,7 +50,7 @@ function Main({
               <span>{lang === "eng" ? "Guidlines" : "Рекомендации"}</span>
             </Link>
           </div>
-          <div className="box"></div>
+          {/* <div className="box"></div> */}
         </div>
         <Footer />
       </div>

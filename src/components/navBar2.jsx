@@ -6,7 +6,6 @@ import "./slider.less";
 
 function Navbar2({
   list,
-  pylan,
   handleLanguage,
   lang,
   chooseAudio,
