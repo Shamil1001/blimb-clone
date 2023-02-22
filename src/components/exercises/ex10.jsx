@@ -41,11 +41,15 @@ function Exer10({ list, pylan, handleLanguage, lang }) {
           handleLanguage={handleLanguage}
         />
         <div className="navyExer">
-          <h1 className="guidTitle">{lang == "eng" ? distance[0].eng : ""}</h1>
+          <h1 className="guidTitle">
+            {lang == "eng" ? distance[0].eng : distance[0].rus}
+          </h1>
           <h1>
             <Number n={20} />
           </h1>
-          <span className="engl">{lang == "eng" ? distance[1].eng : ""}</span>
+          <span className="engl">
+            {lang == "eng" ? distance[1].eng : distance[1].rus}
+          </span>
         </div>
         <div className="footer">
           <div className="social"></div>

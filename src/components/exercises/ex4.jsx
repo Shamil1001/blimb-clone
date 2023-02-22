@@ -41,11 +41,15 @@ function Exer4({ list, pylan, handleLanguage, lang }) {
           handleLanguage={handleLanguage}
         />
         <div className="navyExer">
-          <h1 className="guidTitle">{lang == "eng" ? LeftRight[0].eng : ""}</h1>
+          <h1 className="guidTitle">
+            {lang == "eng" ? LeftRight[0].eng : LeftRight[0].rus}
+          </h1>
           <h1>
             <Number n={20} />
           </h1>
-          <span className="engl">{lang == "eng" ? LeftRight[1].eng : ""}</span>
+          <span className="engl">
+            {lang == "eng" ? LeftRight[1].eng : LeftRight[1].rus}
+          </span>
           <div className="box4"></div>
         </div>
         <div className="footer">

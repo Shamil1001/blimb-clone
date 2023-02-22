@@ -38,11 +38,15 @@ function Exer7({ list, pylan, handleLanguage, lang }) {
           handleLanguage={handleLanguage}
         />
         <div className="navyExer">
-          <h1 className="guidTitle">{lang == "eng" ? clockWise[0].eng : ""}</h1>
+          <h1 className="guidTitle">
+            {lang == "eng" ? clockWise[0].eng : clockWise[0].rus}
+          </h1>
           <h1>
             <Number n={20} />
           </h1>
-          <span className="engl">{lang == "eng" ? clockWise[1].eng : ""}</span>
+          <span className="engl">
+            {lang == "eng" ? clockWise[1].eng : clockWise[1].rus}
+          </span>
           <div className="box7"></div>
         </div>
         <div className="footer">
