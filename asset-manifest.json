@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/blimb-clone/static/css/main.acd8039c.css",
-    "main.js": "/blimb-clone/static/js/main.c16c3904.js",
+    "main.js": "/blimb-clone/static/js/main.b9bec8fc.js",
     "static/js/787.5480e000.chunk.js": "/blimb-clone/static/js/787.5480e000.chunk.js",
     "static/media/audio3.wav": "/blimb-clone/static/media/audio3.4b92e28ef11651457ad7.wav",
     "static/media/audio2.wav": "/blimb-clone/static/media/audio2.673b0c74ea6970544711.wav",
@@ -9,11 +9,11 @@
     "index.html": "/blimb-clone/index.html",
     "static/media/slider.less": "/blimb-clone/static/media/slider.541f41733690e0e34efb.less",
     "main.acd8039c.css.map": "/blimb-clone/static/css/main.acd8039c.css.map",
-    "main.c16c3904.js.map": "/blimb-clone/static/js/main.c16c3904.js.map",
+    "main.b9bec8fc.js.map": "/blimb-clone/static/js/main.b9bec8fc.js.map",
     "787.5480e000.chunk.js.map": "/blimb-clone/static/js/787.5480e000.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.acd8039c.css",
-    "static/js/main.c16c3904.js"
+    "static/js/main.b9bec8fc.js"
   ]
 }
