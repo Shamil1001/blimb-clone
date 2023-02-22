@@ -15,8 +15,6 @@ function Main({
   slideValue,
   handleChange,
 }) {
-  // const [isActive, setIsActive] = useState(false);
-
   return (
     <>
       <div className="main">
