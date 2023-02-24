@@ -1,18 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./exercise.css";
 import { Outlet, useNavigate } from "react-router-dom";
-import { useSpring, animated } from "react-spring";
 import Navbar2 from "../navBar2";
-
-function Number({ n }) {
-  const { number } = useSpring({
-    from: { number: n },
-    number: 0,
-    delay: 1000,
-    config: { duration: 15000 },
-  });
-  return <animated.div>{number.to((n) => n.toFixed(0))}</animated.div>;
-}
 
 function Exer2({
   list,
@@ -47,14 +36,6 @@ function Exer2({
     return () => clearInterval(interval);
   }, [counter]);
 
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     pylan[voiceChoice].volume = slideValue / 100;
-  //     pylan[voiceChoice].play();
-  //     navigate("/exer3/");
-  //   }, 18000);
-  // }, []);
-
   return (
     <>
       <div className="main">
@@ -74,7 +55,6 @@ function Exer2({
           </h1>
           <h1>
             <span>{0 <= counter ? counter : 0}</span>
-            {/* <Number n={20} /> */}
           </h1>
           <span className="engl">
             {lang === "eng" ? upDown[1].eng : upDown[1].rus}

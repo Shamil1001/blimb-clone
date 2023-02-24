@@ -1,20 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./exercise.css";
 import { Outlet, useNavigate } from "react-router-dom";
-import { useSpring, animated } from "react-spring";
 import Navbar2 from "../navBar2";
-import Exer2 from "./Exer2";
-
-function Number({ n }) {
-  const { number } = useSpring({
-    from: { number: n },
-    number: 0,
-    delay: 1000,
-    config: { duration: 15000 },
-  });
-  console.log(number.to((n) => n.toFixed(0)));
-  return <animated.div>{number.to((n) => n.toFixed(0))}</animated.div>;
-}
 
 function Exercise({
   list,
@@ -49,15 +36,6 @@ function Exercise({
     },
   ];
 
-  useEffect(() => {
-    // if (counter == 15) {
-    //   pylan[voiceChoice].play();
-    //   navigate("/exer2");
-    // }
-    // setTimeout(() => {
-    // }, 16000);
-  }, []);
-
   return (
     <>
       <div className="main">
@@ -77,7 +55,6 @@ function Exercise({
           </h1>
           <h1>
             <span>{0 <= counter ? counter : 0}</span>
-            {/* <Number n={15} /> */}
           </h1>
           <span className="engl">
             {lang === "eng" ? relax[1].eng : relax[1].rus}
