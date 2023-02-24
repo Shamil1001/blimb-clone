@@ -19,8 +19,10 @@ function Exercise({
   useEffect(() => {
     const interval = setInterval(() => {
       setCounter((prevCounter) => prevCounter - 1);
-      console.log(counter);
+      // console.log(pylan[voiceChoice]);
       if (counter == 0) {
+        pylan[voiceChoice].volume = slideValue / 100;
+        pylan[voiceChoice].play();
         navigate("/exer2");
       }
     }, 1000);

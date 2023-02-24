@@ -24,8 +24,9 @@ function Exer7({
   useEffect(() => {
     const interval = setInterval(() => {
       setCounter((prevCounter) => prevCounter - 1);
-      console.log(counter);
       if (counter == 0) {
+        pylan[voiceChoice].volume = slideValue / 100;
+        pylan[voiceChoice].play();
         navigate("/exer8");
       }
     }, 1000);

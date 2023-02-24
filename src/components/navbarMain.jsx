@@ -71,6 +71,7 @@ function Navbar({
               }
             >
               <Slider
+                className="slider"
                 style={{ height: 100 }}
                 value={slideValue}
                 progress

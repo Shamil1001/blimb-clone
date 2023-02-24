@@ -27,8 +27,7 @@ function Exer12({
   useEffect(() => {
     const interval = setInterval(() => {
       setCounter((prevCounter) => prevCounter - 1);
-      console.log(counter);
-      if (counter == 0) {
+      if (counter === 0) {
         navigate("/");
       }
     }, 1000);

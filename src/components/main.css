@@ -208,6 +208,10 @@
   display: block;
 }
 
+.slider {
+  margin-left: 8px;
+}
+
 .active {
   visibility: visible;
   opacity: 0.6;

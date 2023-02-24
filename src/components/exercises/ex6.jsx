@@ -1,7 +1,18 @@
 import React, { useEffect, useState } from "react";
 import "./exercise.css";
 import { Outlet, useNavigate } from "react-router-dom";
+import { useSpring, animated } from "react-spring";
 import Navbar2 from "../navBar2";
+
+function Number({ n }) {
+  const { number } = useSpring({
+    from: { number: n },
+    number: 0,
+    delay: 1000,
+    config: { duration: 15000 },
+  });
+  return <animated.div>{number.to((n) => n.toFixed(0))}</animated.div>;
+}
 
 function Exer6({
   list,
@@ -27,14 +38,23 @@ function Exer6({
   useEffect(() => {
     const interval = setInterval(() => {
       setCounter((prevCounter) => prevCounter - 1);
-      console.log(counter);
       if (counter == 0) {
+        pylan[voiceChoice].volume = slideValue / 100;
+        pylan[voiceChoice].play();
         navigate("/exer7");
       }
     }, 1000);
 
     return () => clearInterval(interval);
   }, [counter]);
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     pylan[voiceChoice].volume = slideValue / 100;
+  //     pylan[voiceChoice].play();
+  //     navigate("/exer7/");
+  //   }, 18000);
+  // }, []);
 
   return (
     <>

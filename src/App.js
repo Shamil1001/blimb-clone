@@ -27,7 +27,6 @@ function App() {
   const [slideValue, setSlideValue] = useState(50);
 
   const handleChange = (newValue) => {
-    console.log(newValue);
     setSlideValue(newValue);
   };
 
