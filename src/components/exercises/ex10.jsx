@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./exercise.css";
 import { Outlet, useNavigate } from "react-router-dom";
 import { useSpring, animated } from "react-spring";
@@ -34,13 +34,26 @@ function Exer10({
     },
   ];
 
+  const [counter, setCounter] = useState(15);
   useEffect(() => {
-    setTimeout(() => {
-      pylan[voiceChoice].volume = slideValue / 100;
-      pylan[voiceChoice].play();
-      navigate("/exer11/");
-    }, 18000);
-  }, []);
+    const interval = setInterval(() => {
+      setCounter((prevCounter) => prevCounter - 1);
+      console.log(counter);
+      if (counter == 0) {
+        navigate("/exer11");
+      }
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [counter]);
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     pylan[voiceChoice].volume = slideValue / 100;
+  //     pylan[voiceChoice].play();
+  //     navigate("/exer11/");
+  //   }, 18000);
+  // }, []);
 
   return (
     <>
@@ -60,7 +73,8 @@ function Exer10({
             {lang === "eng" ? distance[0].eng : distance[0].rus}
           </h1>
           <h1>
-            <Number n={20} />
+            {/* <Number n={20} /> */}
+            <span>{0 <= counter ? counter : 0}</span>
           </h1>
           <span className="engl">
             {lang === "eng" ? distance[1].eng : distance[1].rus}

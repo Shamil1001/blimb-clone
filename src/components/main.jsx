@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./main.css";
 import { Link, Outlet } from "react-router-dom";
 import "./slider.less";
 import Footer from "./footer";
 import Navbar from "./navbarMain";
+import Guidline from "./guidline";
 
 function Main({
   list,
@@ -48,7 +49,6 @@ function Main({
               <span>{lang === "eng" ? "Guidlines" : "Рекомендации"}</span>
             </Link>
           </div>
-          {/* <div className="box"></div> */}
         </div>
         <Footer />
       </div>

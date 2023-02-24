@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./exercise.css";
 import { Outlet, useNavigate } from "react-router-dom";
 import { useSpring, animated } from "react-spring";
@@ -34,13 +34,26 @@ function Exer12({
     },
   ];
 
+  const [counter, setCounter] = useState(5);
   useEffect(() => {
-    setTimeout(() => {
-      pylan[voiceChoice].volume = slideValue / 100;
-      pylan[voiceChoice].play();
-      navigate("/");
-    }, 5000);
-  }, []);
+    const interval = setInterval(() => {
+      setCounter((prevCounter) => prevCounter - 1);
+      console.log(counter);
+      if (counter == 0) {
+        navigate("/");
+      }
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [counter]);
+
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     pylan[voiceChoice].volume = slideValue / 100;
+  //     pylan[voiceChoice].play();
+  //     navigate("/");
+  //   }, 5000);
+  // }, []);
 
   return (
     <>
@@ -59,9 +72,10 @@ function Exer12({
           <h1 className="guidTitle">
             {lang === "eng" ? wellDone[0].eng : wellDone[0].rus}
           </h1>
-          {/* <h1>
-            <Number n={20} />
-          </h1> */}
+          <h1>
+            {/* <span>{0 <= counter ? counter : 0}</span> */}
+            {/* <Number n={20} /> */}
+          </h1>
           <span className="engl">
             {lang === "eng" ? wellDone[1].eng : wellDone[1].rus}
           </span>
