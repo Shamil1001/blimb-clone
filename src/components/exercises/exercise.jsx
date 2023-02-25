@@ -21,8 +21,10 @@ function Exercise({
       setCounter((prevCounter) => prevCounter - 1);
       // console.log(pylan[voiceChoice]);
       if (counter == 0) {
-        pylan[voiceChoice].volume = slideValue / 100;
-        pylan[voiceChoice].play();
+        if (voiceChoice !== "four") {
+          pylan[voiceChoice].volume = slideValue / 100;
+          pylan[voiceChoice].play();
+        }
         navigate("/exer2");
       }
     }, 1000);

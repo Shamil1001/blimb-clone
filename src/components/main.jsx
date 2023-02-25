@@ -29,16 +29,13 @@ function Main({
           handleChange={handleChange}
         />
         <div className="navy">
-          <h1 className="button" id="start">
-            <Link
-              to="/guid/"
-              style={{ color: "white", textDecoration: "none" }}
-            >
+          <Link to="/guid/" style={{ color: "white", textDecoration: "none" }}>
+            <h1 className="button" id="start">
               <span className="eng">
                 {lang === "eng" ? "Let's start" : "Начать зарядку для глаз"}
               </span>
-            </Link>
-          </h1>
+            </h1>
+          </Link>
 
           <div className="nav">
             <Link

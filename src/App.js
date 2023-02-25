@@ -31,8 +31,10 @@ function App() {
   };
 
   const chooseAudio = (e) => {
-    pylan[e].volume = slideValue / 100;
-    pylan[e].play();
+    if (e !== "four") {
+      pylan[e].volume = slideValue / 100;
+      pylan[e].play();
+    }
     setVoiceChoice(e);
   };
 
@@ -61,7 +63,7 @@ function App() {
     one: audio1,
     two: audio2,
     three: audio3,
-    four: audio2,
+    four: "",
   };
 
   const [langArr, setLangArr] = useState(true);

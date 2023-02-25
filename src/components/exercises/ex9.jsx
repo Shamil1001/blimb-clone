@@ -28,8 +28,10 @@ function Exer9({
     const interval = setInterval(() => {
       setCounter((prevCounter) => prevCounter - 1);
       if (counter == 0) {
-        pylan[voiceChoice].volume = slideValue / 100;
-        pylan[voiceChoice].play();
+        if (voiceChoice !== "four") {
+          pylan[voiceChoice].volume = slideValue / 100;
+          pylan[voiceChoice].play();
+        }
         navigate("/exer10");
       }
     }, 1000);

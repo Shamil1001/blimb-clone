@@ -52,26 +52,38 @@ function Guidline({
           handleChange={handleChange}
         />
         <div className="navyGuid">
-          <h1 className="guidTitle">
+          <p className="guidTitle">
             {lang === "eng" ? guideLang[0].eng : guideLang[0].rus}
-          </h1>
-          <div>
-            <span>{lang === "eng" ? guideLang[1].eng : guideLang[1].rus}</span>
-          </div>
-          <div>
-            <span>{lang === "eng" ? guideLang[2].eng : guideLang[2].rus}</span>
-          </div>
-          <div>
-            <span>{lang === "eng" ? guideLang[3].eng : guideLang[3].rus}</span>
-          </div>
-          <div>
-            <span>{lang === "eng" ? guideLang[4].eng : guideLang[4].rus}</span>
-          </div>
-          <div>
-            <span>{lang === "eng" ? guideLang[5].eng : guideLang[5].rus}</span>
+          </p>
+          <div className="guidText">
+            <div>
+              <span>
+                {lang === "eng" ? guideLang[1].eng : guideLang[1].rus}
+              </span>
+            </div>
+            <div>
+              <span>
+                {lang === "eng" ? guideLang[2].eng : guideLang[2].rus}
+              </span>
+            </div>
+            <div>
+              <span>
+                {lang === "eng" ? guideLang[3].eng : guideLang[3].rus}
+              </span>
+            </div>
+            <div>
+              <span>
+                {lang === "eng" ? guideLang[4].eng : guideLang[4].rus}
+              </span>
+            </div>
+            <div>
+              <span>
+                {lang === "eng" ? guideLang[5].eng : guideLang[5].rus}
+              </span>
+            </div>
           </div>
           <div className="input-btn">
-            <div>
+            <div className="show-checkbox">
               <input
                 className="form-check-input"
                 type="checkbox"
