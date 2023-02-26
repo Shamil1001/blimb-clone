@@ -1,12 +1,12 @@
 .main {
-  width: 100vw;
-  height: 100vh;
+  /* width: 100vw; */
+  /* height: 100vh; */
   background: linear-gradient(
     -45deg,
     rgb(150, 122, 153),
     rgb(195, 99, 158),
-    rgb(150, 122, 153),
-    rgb(195, 99, 158)
+    rgb(81, 78, 104),
+    rgb(211, 203, 98)
   );
   background-size: 400% 400%;
   -webkit-animation: Gradient 15s ease infinite;
@@ -15,23 +15,65 @@
 }
 
 .eyes {
-  background-image: url("https://blimb.su/img/eyes.png");
+  background-image: url("https://blimb.su/img/an-minieye.png");
   background-position: 0 0;
   width: 90px;
   height: 52px;
-  transition-property: left, top, margin-left, width, height, margin-top;
-  -moz-transition-property: left, top, margin-left, width, height, margin-top;
-  transition-duration: 0.7s;
-  -moz-transition-duration: 0.7s;
+  transition-property: opacity;
+  transition-duration: 1s;
   background-size: 100%;
   cursor: pointer;
-
   position: absolute;
   top: 40px;
   left: 2%;
-  /* margin-left: -85px; */
   opacity: 1;
+  transition: all 0.9s ease-in-out;
+
+  animation: miniopenclipeyes 0.8s steps(14) 1;
 }
+
+@keyframes miniopenclipeyes {
+  0% {
+    background-position: 0 -700px;
+    opacity: 0;
+  }
+  60% {
+    background-position: 0 -700px;
+    opacity: 0;
+  }
+  100% {
+    background-position: 0 0;
+    opacity: 0.6;
+  }
+}
+
+.eyes:hover:before {
+  content: "";
+  display: block;
+  width: 14px;
+  height: 14px;
+  position: absolute;
+  top: 50%;
+  margin-top: -8px;
+  left: 50%;
+  margin-left: -6px;
+  background: #fff;
+  border-radius: 50%;
+  transition-property: transform;
+  transition-duration: 1s;
+  /* -webkit-transition: -moz-transform 0.3s ease-out;
+  -moz-transition: -webkit-transform 0.3s ease-out; */
+  /* transition: all 1s ease-in-out; */
+  /* transition: all 0.2s ease-in-out; */
+  transform: scale(1.5);
+  /* -webkit-transform: scale(1.5); */
+}
+/* .eyes:hover {
+  transition-property: transform;
+  transition-duration: 0.3s;
+  transform: scale(1.5);
+  -webkit-transform: scale(1.5);
+} */
 
 .optionPanel {
   position: absolute;
@@ -160,37 +202,6 @@ ul {
   height: 10px;
 }
 
-.before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 6px;
-  top: 0px;
-  bottom: 0;
-  left: 0;
-  margin-left: 7px;
-  z-index: 0;
-  border: 1px solid #fff;
-  border-radius: 3px;
-  /* box-sizing: border-box; */
-  /* -webkit-box-sizing: border-box; */
-}
-
-.after {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 6px;
-  top: 0px;
-  bottom: 0;
-  left: 0;
-  margin-left: 7px;
-  z-index: 0;
-  border: 1px solid #fff;
-  border-radius: 3px;
-  box-sizing: border-box;
-}
-
 .navyGuid {
   position: absolute;
   top: 25%;
@@ -198,6 +209,18 @@ ul {
   margin-left: 25%;
   width: 60%;
   color: white;
+  animation-name: fadeInBottom;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+}
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(10%);
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .guidText {

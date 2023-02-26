@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./main.css";
 import { Link, Outlet } from "react-router-dom";
 import "./slider.less";
@@ -15,6 +15,8 @@ function Main({
   slideValue,
   handleChange,
 }) {
+  const [eyeActive, setEyeActive] = useState(false);
+
   return (
     <>
       <div className="main">
@@ -27,10 +29,15 @@ function Main({
           chooseAudio={chooseAudio}
           slideValue={slideValue}
           handleChange={handleChange}
+          eyeActive={eyeActive}
         />
         <div className="navy">
           <Link to="/guid/" style={{ color: "white", textDecoration: "none" }}>
-            <h1 className="button" id="start">
+            <h1
+              onClick={() => setEyeActive(!eyeActive)}
+              className="button"
+              id="start"
+            >
               <span className="eng">
                 {lang === "eng" ? "Let's start" : "Начать зарядку для глаз"}
               </span>

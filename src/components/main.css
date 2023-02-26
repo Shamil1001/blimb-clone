@@ -1,28 +1,39 @@
 @import "rsuite/dist/rsuite.css";
 
-.box {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  margin: auto;
-  position: absolute;
-  top: 100%;
-  left: 60%;
-  background-color: white;
-  opacity: 50%;
-  animation: GFG 5s infinite;
-  animation-delay: 2s;
-}
-
 .main {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
+  background-size: 100% 100%;
+  position: relative;
+  /* min-width: 1000px; */
+  /* max-width: 1400px; */
+  /* min-height: 700px; */
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-  background-size: 400% 400%;
   -webkit-animation: Gradient 15s ease infinite;
   -moz-animation: Gradient 15s ease infinite;
   animation: Gradient 15s ease infinite;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
+/* @media (max-width: 900px) {
+  .main {
+    min-width: 800px;
+  }
+} */
+
+/* background: linear-gradient(
+    -45deg,
+    rgb(150, 122, 153),
+    rgb(195, 99, 158),
+    rgb(81, 78, 104),
+    rgb(211, 203, 98)
+  );
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 15s ease infinite;
+  -moz-animation: Gradient 15s ease infinite;
+  animation: Gradient 15s ease infinite; */
 
 @-webkit-keyframes Gradient {
   0% {
@@ -60,13 +71,25 @@
   }
 }
 
+.wrapper {
+  position: relative;
+  /* min-width: 700px; */
+  width: 100%;
+  height: 100%;
+  /* padding-top: 100%; */
+  -webkit-box-sizing: border-box;
+  -webkit-transition-property: padding-top;
+  -webkit-transition-duration: 1s;
+}
+
 .eye {
   background-image: url("https://blimb.su/img/eyes.png");
-  background-position: 0 0;
+  background-position: 0% 0%;
   width: 170px;
   height: 100px;
-  transition-property: opacity;
-  transition-duration: 1s;
+  transition-property: left, top, margin-left, width, height, margin-top,
+    background-position, background-size, padding-top;
+  transition-duration: 2s;
   background-size: 100%;
   cursor: pointer;
   position: absolute;
@@ -74,11 +97,28 @@
   left: 50%;
   margin-left: -85px;
   opacity: 1;
+  animation: clipeyes 0.3s steps(10) 1;
 }
 
-.optionPanel {
+.active {
+  /* opacity: 1; */
+  /* animation: clipeyes 0.3s steps(10) 1; */
+}
+
+@keyframes clipeyes {
+  0% {
+    background-position: 0 0;
+    opacity: 1;
+  }
+  100% {
+    background-position: 0 -947px;
+    opacity: 0;
+  }
+}
+
+.wrapper .optionPanel {
   position: absolute;
-  right: 50px;
+  right: 100px;
   top: 41px;
   z-index: 1;
   text-align: center;
@@ -137,9 +177,6 @@
   background: url(https://blimb.su/img/icons.png) 0 -65px no-repeat;
 }
 
-/* ul{
-    list-style: none;
-} */
 .close {
   opacity: 0.6;
   transition-property: opacity, z-index;
@@ -225,7 +262,7 @@
   height: 10px;
 }
 
-.before {
+/* .before {
   content: "";
   position: absolute;
   display: block;
@@ -252,7 +289,7 @@
   border: 1px solid #fff;
   border-radius: 3px;
   box-sizing: border-box;
-}
+} */
 
 .navy {
   position: absolute;

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./App.css";
 import Main from "./components/main";
 import Guidline from "./components/guidline";
 import Exercise from "./components/exercises/exercise";

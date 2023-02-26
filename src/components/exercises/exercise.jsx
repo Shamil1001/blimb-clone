@@ -60,11 +60,11 @@ function Exercise({
           <h1>
             <span>{0 <= counter ? counter : 0}</span>
           </h1>
+          <div className="box1"></div>
           <span className="engl">
             {lang === "eng" ? relax[1].eng : relax[1].rus}
           </span>
         </div>
-        <div className="box1"></div>
       </div>
       <Outlet />
     </>

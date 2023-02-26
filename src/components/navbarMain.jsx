@@ -13,6 +13,7 @@ function Navbar({
   chooseAudio,
   handleChange,
   slideValue,
+  eyeActive,
 }) {
   const [volumeAct, setVolumeAct] = useState(false);
   const [volPanel, setVolPanel] = useState(false);
@@ -24,7 +25,7 @@ function Navbar({
   return (
     <>
       <div className="wrapper">
-        <div className="eye"></div>
+        <div className={eyeActive ? "eye active" : "eye"}></div>
         <div className="optionPanel">
           <span onClick={() => handleLanguage()} className="languagePanel">
             <span>{lang === "eng" ? "Eng" : "Ru"}</span>
