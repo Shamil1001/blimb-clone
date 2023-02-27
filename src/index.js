@@ -1,6 +1,7 @@
 import React from "react";
 import reportWebVitals from "./reportWebVitals";
 import App from "./App";
+// import "./index.css";
 import { BrowserRouter } from "react-router-dom";
 import { createRoot } from "react-dom/client";
 
