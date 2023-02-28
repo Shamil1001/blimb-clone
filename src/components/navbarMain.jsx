@@ -24,62 +24,60 @@ function Navbar({
 
   return (
     <>
-      <div className="wrapper">
-        <div className={eyeActive ? "eye active" : "eye"}></div>
-        <div className="optionPanel">
-          <span onClick={() => handleLanguage()} className="languagePanel">
-            <span>{lang === "eng" ? "Eng" : "Ru"}</span>
-          </span>
-          <div className="audioPanel">
-            <span
-              onClick={() => handleVolumeAct()}
-              className={
-                voiceChoice === "three"
-                  ? "volume thirdVoice"
-                  : voiceChoice === "four"
-                  ? "volume fourthVoice"
-                  : voiceChoice === "two"
-                  ? "volume secondVoice"
-                  : "volume firstVoice"
-              }
-            ></span>
-            <ul
-              className={
-                volumeAct === true ? "volumeList volActive" : "volumeList"
-              }
-            >
-              {list.map((item) => (
-                <li key={item.num}>
-                  <span
-                    onClick={() => chooseAudio(item.num)}
-                    className={item.class}
-                  ></span>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div className="volumeWrapper">
-            <div
-              onClick={() => setVolPanel(!volPanel)}
-              className="volumePanel"
-              id="maximum"
-            ></div>
-            <div
-              className={
-                volPanel === false
-                  ? "slide_line_volume"
-                  : "slide_line_volume visActive"
-              }
-            >
-              <Slider
-                className="slider"
-                style={{ height: 100 }}
-                value={slideValue}
-                progress
-                vertical
-                onChange={(e) => handleChange(e)}
-              />
-            </div>
+      <div className={eyeActive ? "eye active" : "eye"}></div>
+      <div className="optionPanel">
+        <span onClick={() => handleLanguage()} className="languagePanel">
+          <span>{lang === "eng" ? "Eng" : "Ru"}</span>
+        </span>
+        <div className="audioPanel">
+          <span
+            onClick={() => handleVolumeAct()}
+            className={
+              voiceChoice === "three"
+                ? "volume thirdVoice"
+                : voiceChoice === "four"
+                ? "volume fourthVoice"
+                : voiceChoice === "two"
+                ? "volume secondVoice"
+                : "volume firstVoice"
+            }
+          ></span>
+          <ul
+            className={
+              volumeAct === true ? "volumeList volActive" : "volumeList"
+            }
+          >
+            {list.map((item) => (
+              <li key={item.num}>
+                <span
+                  onClick={() => chooseAudio(item.num)}
+                  className={item.class}
+                ></span>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div className="volumeWrapper">
+          <div
+            onClick={() => setVolPanel(!volPanel)}
+            className="volumePanel"
+            id="maximum"
+          ></div>
+          <div
+            className={
+              volPanel === false
+                ? "slide_line_volume"
+                : "slide_line_volume visActive"
+            }
+          >
+            <Slider
+              className="slider"
+              style={{ height: 100 }}
+              value={slideValue}
+              progress
+              vertical
+              onChange={(e) => handleChange(e)}
+            />
           </div>
         </div>
       </div>

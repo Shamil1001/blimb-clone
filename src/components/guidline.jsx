@@ -40,7 +40,7 @@ function Guidline({
 
   return (
     <>
-      <div className="main">
+      <div className="main guide">
         <Navbar2
           list={list}
           pylan={pylan}
@@ -56,11 +56,8 @@ function Guidline({
             {lang === "eng" ? guideLang[0].eng : guideLang[0].rus}
           </p>
           <div className="guidText">
-            <div>
-              <span>
-                {lang === "eng" ? guideLang[1].eng : guideLang[1].rus}
-              </span>
-            </div>
+            <span>{lang === "eng" ? guideLang[1].eng : guideLang[1].rus}</span>
+
             <div>
               <span>
                 {lang === "eng" ? guideLang[2].eng : guideLang[2].rus}
@@ -106,9 +103,9 @@ function Guidline({
             </Link>
           </div>
         </div>
-        <div className="footer">
+        {/* <div className="footer">
           <div className="social"></div>
-        </div>
+        </div> */}
       </div>
       <Outlet />
     </>

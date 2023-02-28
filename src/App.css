@@ -1,15 +1,3 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* .button-blue {
-  @apply bg-blue-500 text-white rounded p-2 mx-2;
-}
-
-.button-blue:hover {
-  @apply bg-blue-600;
-} */
-
 * {
   padding: 0;
   margin: 0;
@@ -17,12 +5,12 @@
 }
 
 body {
-  background-color: green;
-  height: 100%;
-  width: 100%;
+  /* margin: 0; */
+  /* overflow: hidden; */
+  /* background-color: green;
+  height: 100%; */
   /* position: relative; */
+  /* position: relative;
+  width: 100%;
+  display: block; */
 }
-
-/* .container{
-  max-width: 90%;
-} */

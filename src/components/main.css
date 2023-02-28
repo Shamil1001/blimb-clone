@@ -1,32 +1,30 @@
 @import "rsuite/dist/rsuite.css";
 
 .main {
+  position: relative;
+  height: 100vh;
   width: 100%;
+  /* padding-top: 100%; */
+  font-family: "PT Sans", sans-serif;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  transition-property: padding-top;
+  -webkit-transition-property: padding-top;
+  -moz-transition-property: padding-top;
+  transition-duration: 1s;
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+
+  /* width: 100%;
   height: 100%;
   position: absolute;
-  /* min-width: 500px; */
   background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
   -webkit-animation: Gradient 15s ease infinite;
   -moz-animation: Gradient 15s ease infinite;
   animation: Gradient 15s ease infinite;
   display: flex;
-  justify-content: center;
-}
-
-@media only screen and (max-width: 920px) {
-  .main {
-    /* width: 650px; */
-    /* height: 100vh; */
-    /* width: 80%; */
-  }
-}
-
-@media only screen and (max-width: 281px) {
-  .main {
-    /* width: 650px; */
-    /* height: 178.5vh; */
-    /* width: 80%; */
-  }
+  justify-content: center; */
 }
 
 @-webkit-keyframes Gradient {
@@ -65,18 +63,18 @@
   }
 }
 
-.wrapper {
-  position: relative;
+/* .wrapper {
+  position: absolute;
   width: 100%;
   height: 20%;
   -webkit-box-sizing: border-box;
   -webkit-transition-property: padding-top;
   -webkit-transition-duration: 1s;
-}
+} */
 
 .eye {
   background-image: url("https://blimb.su/img/eyes.png");
-  background-position: 0 0;
+  /* background-position: 0 0;
   width: 170px;
   height: 100px;
   transition-property: left, top, margin-left, width, height, margin-top,
@@ -89,7 +87,41 @@
   left: 50%;
   margin-left: -85px;
   opacity: 1;
-  animation: clipeyes 0.3s steps(10) 1;
+  animation: clipeyes 0.3s steps(10) 1; */
+
+  background-position: 0 0;
+  width: 170px;
+  height: 100px;
+  transition-property: left, top, margin-left, width, height, margin-top;
+  -moz-transition-property: left, top, margin-left, width, height, margin-top;
+  transition-duration: 0.7s;
+  -moz-transition-duration: 0.7s;
+  background-size: 100%;
+  cursor: pointer;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  margin-left: -85px;
+  opacity: 1;
+  -webkit-animation: clipeyes 0.2s steps(10) 1;
+  -moz--animation: clipeyes 0.2s steps(10) 1;
+  animation: clipeyes 0.2s steps(10) 1;
+}
+
+@media only screen and (max-width: 500px) {
+  .eye {
+    width: 120px;
+    height: 70px;
+    margin-left: -70px;
+  }
+}
+
+@media only screen and (max-width: 300px) {
+  .eye {
+    width: 90px;
+    height: 50px;
+    margin-left: -70px;
+  }
 }
 
 @keyframes clipeyes {
@@ -103,7 +135,7 @@
   }
 }
 
-.wrapper .optionPanel {
+.main .optionPanel {
   position: absolute;
   right: 10px;
   top: 41px;
@@ -130,7 +162,7 @@
 .audioPanel {
   display: inline-block;
   position: relative;
-  margin-left: 24px;
+  /* margin-left: 24px; */
 }
 
 .volumeList {
@@ -308,12 +340,22 @@
   justify-content: center;
   gap: 20px;
 }
+
+.tweeter:hover,
+.facebook:hover,
+.Vk:hover {
+  background: rgba(87, 85, 85, 0.16);
+}
+
 .tweeter,
 .facebook,
 .Vk {
+  fill: white;
+  background: rgba(236, 236, 236, 0.16);
+  border-radius: 3px;
   display: flex;
   flex-direction: row;
   gap: 5px;
-  padding: 5px 10px;
+  padding: 3px 5px;
   cursor: pointer;
 }
