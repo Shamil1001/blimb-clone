@@ -1,31 +1,23 @@
 .navyExer {
   position: absolute;
-  top: 40%;
+  top: 20%;
   margin-left: 20%;
   width: 60%;
   color: white;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-/* clockwise */
-/* .box {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 35%;
-  left: 50%;
-  border-radius: 50%;
-  margin: auto;
-  background-color: white;
-  opacity: 50%;
-  animation: exam 6s infinite;
-} */
+.navyExer .ex1 {
+  /* margin-top: 150px; */
+  font-size: 20px;
+}
 
-/* @keyframes exam {
-  0% {
-    transform: rotate(720deg) translateX(250px) translateY(250px) rotate(720deg);
-  }
-} */
+.navyExer .exCounter {
+  font-size: 80px;
+}
 
 /* up-down */
 .box2 {
@@ -34,7 +26,7 @@
   border-radius: 50%;
   margin: auto;
   position: absolute;
-  top: -140%;
+  top: -40%;
   left: 48%;
   background-color: white;
   opacity: 50%;
@@ -44,19 +36,19 @@
 @keyframes ex2 {
   0% {
     opacity: 100%;
-    top: -160%;
+    top: -40%;
   }
   25% {
     opacity: 50%;
-    top: 235%;
+    top: 150%;
   }
   50% {
     opacity: 50%;
-    top: -160%;
+    top: -40%;
   }
   75% {
     opacity: 100%;
-    top: 235%;
+    top: 150%;
   }
 }
 
@@ -67,7 +59,7 @@
   border-radius: 50%;
   margin: auto;
   position: absolute;
-  top: 0%;
+  top: 65%;
   left: 0%;
   background-color: white;
   opacity: 50%;
@@ -116,23 +108,23 @@
 @keyframes ex5 {
   0% {
     opacity: 100%;
-    top: 220%;
+    top: 150%;
   }
   25% {
-    top: -170%;
+    top: -40%;
     left: -30%;
   }
   50% {
-    top: 220%;
+    top: 150%;
     left: 125%;
   }
   75% {
-    top: -170%;
+    top: -40%;
     left: 125%;
   }
   100% {
     left: -30%;
-    top: 220%;
+    top: 150%;
   }
 }
 
@@ -141,7 +133,7 @@
   width: 30px;
   height: 30px;
   position: relative;
-  top: -100px;
+  top: -170px;
   border-radius: 50%;
   margin: auto;
   background-color: white;
@@ -151,11 +143,11 @@
 
 @keyframes ex7 {
   0% {
-    transform: rotate(0deg) translateY(200px) rotate(0deg);
+    transform: rotate(0deg) translateY(250px) rotate(0deg);
   }
 
   100% {
-    transform: rotate(360deg) translateY(200px) rotate(-360deg);
+    transform: rotate(360deg) translateY(250px) rotate(-360deg);
   }
 }
 
@@ -175,10 +167,6 @@
   animation: box1 1s infinite;
   /* margin-bottom: 50px; */
   /* animation-delay: 2s; */
-}
-
-.navyExer .engl {
-  margin-top: 70px;
 }
 
 @keyframes box1 {
@@ -209,7 +197,7 @@
   width: 30px;
   height: 30px;
   position: absolute;
-  top: 35%;
+  top: 60%;
   left: 50%;
   border-radius: 50%;
   margin: auto;
@@ -220,6 +208,6 @@
 
 @keyframes exam {
   0% {
-    transform: rotate(720deg) translateX(250px) translateY(250px) rotate(720deg);
+    transform: rotate(720deg) translateX(200px) translateY(200px) rotate(720deg);
   }
 }

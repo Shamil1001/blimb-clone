@@ -52,12 +52,9 @@ function Exer12({
           <h1 className="guidTitle">
             {lang === "eng" ? wellDone[0].eng : wellDone[0].rus}
           </h1>
-          <span className="engl">
+          <span className="eng ex1">
             {lang === "eng" ? wellDone[1].eng : wellDone[1].rus}
           </span>
-        </div>
-        <div className="footer">
-          <div className="social"></div>
         </div>
       </div>
       <Outlet />

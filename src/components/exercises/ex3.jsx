@@ -56,15 +56,12 @@ function Exer3({
           <h1 className="guidTitle">
             {lang === "eng" ? clipLang[0].eng : clipLang[0].rus}
           </h1>
-          <h1>
+          <p className="exCounter" style={{ marginBottom: 40 }}>
             <span>{0 <= counter ? counter : 0}</span>
-          </h1>
-          <span className="engl">
+          </p>
+          <span className="eng ex1">
             {lang === "eng" ? clipLang[1].eng : clipLang[1].rus}
           </span>
-        </div>
-        <div className="footer">
-          <div className="social"></div>
         </div>
       </div>
       <Outlet />

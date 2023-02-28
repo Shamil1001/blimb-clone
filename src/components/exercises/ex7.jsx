@@ -53,16 +53,13 @@ function Exer7({
           <h1 className="guidTitle">
             {lang === "eng" ? clockWise[0].eng : clockWise[0].rus}
           </h1>
-          <h1>
+          <p className="exCounter" style={{ marginBottom: 40 }}>
             <span>{0 <= counter ? counter : 0}</span>
-          </h1>
-          <span className="engl">
+          </p>
+          <span className="eng ex1">
             {lang === "eng" ? clockWise[1].eng : clockWise[1].rus}
           </span>
           <div className="box7"></div>
-        </div>
-        <div className="footer">
-          <div className="social"></div>
         </div>
       </div>
       <Outlet />

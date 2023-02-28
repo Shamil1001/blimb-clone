@@ -56,16 +56,13 @@ function Exer4({
           <h1 className="guidTitle">
             {lang === "eng" ? LeftRight[0].eng : LeftRight[0].rus}
           </h1>
-          <h1>
+          <p className="exCounter" style={{ marginBottom: 40 }}>
             <span>{0 <= counter ? counter : 0}</span>
-          </h1>
-          <span className="engl">
+          </p>
+          <span className="eng ex1">
             {lang === "eng" ? LeftRight[1].eng : LeftRight[1].rus}
           </span>
           <div className="box4"></div>
-        </div>
-        <div className="footer">
-          <div className="social"></div>
         </div>
       </div>
       <Outlet />

@@ -57,9 +57,9 @@ function Exercise({
           <h1 className="guidTitle">
             {lang === "eng" ? relax[0].eng : relax[0].rus}
           </h1>
-          <h1 style={{ marginBottom: 40 }}>
+          <p className="exCounter" style={{ marginBottom: 40 }}>
             <span>{0 <= counter ? counter : 0}</span>
-          </h1>
+          </p>
           <div className="box1"></div>
           <span className="eng ex1">
             {lang === "eng" ? relax[1].eng : relax[1].rus}

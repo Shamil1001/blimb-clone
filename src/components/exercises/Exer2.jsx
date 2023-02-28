@@ -56,16 +56,13 @@ function Exer2({
           <h1 className="guidTitle">
             {lang === "eng" ? upDown[0].eng : upDown[0].rus}
           </h1>
-          <h1>
+          <p className="exCounter" style={{ marginBottom: 40 }}>
             <span>{0 <= counter ? counter : 0}</span>
-          </h1>
-          <span className="engl">
+          </p>
+          <span className="eng ex1">
             {lang === "eng" ? upDown[1].eng : upDown[1].rus}
           </span>
           <div className="box2"></div>
-        </div>
-        <div className="footer">
-          <div className="social"></div>
         </div>
       </div>
       <Outlet />
