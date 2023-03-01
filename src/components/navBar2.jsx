@@ -88,17 +88,17 @@ function Navbar2({
           if (checkMouse) {
             $(".pointVolume").removeClass("active");
             $(this).addClass("active");
-            handleLevel($(this).attr("data-volume"));
-            changeAudioVolume(level);
-            // changeAudioVolume($(this).attr("data-volume"));
+            // handleLevel($(this).attr("data-volume"));
+            // changeAudioVolume(level);
+            changeAudioVolume($(this).attr("data-volume"));
           }
         })
         .click(function () {
           $(".pointVolume").removeClass("active");
           $(this).addClass("active");
-          handleLevel($(this).attr("data-volume"));
-          changeAudioVolume(level);
-          // changeAudioVolume($(this).attr("data-volume"));
+          // handleLevel($(this).attr("data-volume"));
+          // changeAudioVolume(level);
+          changeAudioVolume($(this).attr("data-volume"));
         });
     })
     .mouseup(function () {
