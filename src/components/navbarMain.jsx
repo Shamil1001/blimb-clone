@@ -19,7 +19,7 @@ function Navbar({
   slideValue,
   eyeActive,
   handleLevel,
-  level,
+  lev,
 }) {
   let audio1 = new Audio(audi1);
   let audio2 = new Audio(audi2);
@@ -32,11 +32,13 @@ function Navbar({
     audio1.volume = level;
     audio2.volume = level;
     audio3.volume = level;
-    audio1.currentTime = 0;
-    audio2.currentTime = 0;
-    audio3.currentTime = 0;
+    let vol = lev;
+    // console.log(vol);
+    // audio1.currentTime = 0;
+    // audio2.currentTime = 0;
+    // audio3.currentTime = 0;
 
-    // console.log(level);
+    console.log(level);
 
     var volume = $(".volume");
 
@@ -56,14 +58,17 @@ function Navbar({
     }
 
     if (volume.hasClass("firstVoice")) {
-      audio1.play();
-      // pylan["one"].play();
+      // audio1.play();
+      pylan["one"].volume = level;
+      pylan["one"].play();
     } else if (volume.hasClass("secondVoice")) {
-      audio2.play();
-      // pylan["two"].play();
+      // audio2.play();
+      pylan["two"].volume = level;
+      pylan["two"].play();
     } else {
-      // pylan["three"].play();
-      audio3.play();
+      pylan["three"].volume = level;
+      pylan["three"].play();
+      // audio3.play();
     }
   }
 
@@ -74,6 +79,8 @@ function Navbar({
     setVolumeAct(!volumeAct);
   };
 
+  // $(".pointVolume").first().addClass("active");
+
   $(".slideLineVolume")
     .mousedown(function () {
       checkMouse = true;
@@ -82,7 +89,8 @@ function Navbar({
           if (checkMouse) {
             $(".pointVolume").removeClass("active");
             $(this).addClass("active");
-            // handleLevel($(this).attr("data-volume"));
+            console.log($(this).attr("data-volume"));
+            handleLevel($(this).attr("data-volume"));
             // changeAudioVolume(level);
             changeAudioVolume($(this).attr("data-volume"));
           }

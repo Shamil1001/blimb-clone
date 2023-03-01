@@ -33,7 +33,7 @@ function Main({
           handleChange={handleChange}
           eyeActive={eyeActive}
           handleLevel={handleLevel}
-          level={level}
+          lev={level}
         />
         <div className="navy">
           <Link to="/guid/" style={{ color: "white", textDecoration: "none" }}>

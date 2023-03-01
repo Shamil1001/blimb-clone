@@ -12,6 +12,8 @@ function Exer3({
   chooseAudio,
   slideValue,
   handleChange,
+  handleLevel,
+  level,
 }) {
   const navigate = useNavigate();
 
@@ -51,6 +53,8 @@ function Exer3({
           chooseAudio={chooseAudio}
           slideValue={slideValue}
           handleChange={handleChange}
+          handleLevel={handleLevel}
+          lev={level}
         />
         <div className="navyExer">
           <h1 className="guidTitle">

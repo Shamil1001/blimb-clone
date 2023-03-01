@@ -12,6 +12,8 @@ function Exer2({
   chooseAudio,
   slideValue,
   handleChange,
+  handleLevel,
+  level,
 }) {
   const navigate = useNavigate();
 
@@ -29,7 +31,7 @@ function Exer2({
       setCounter((prevCounter) => prevCounter - 1);
       if (counter == 0) {
         if (voiceChoice !== "four") {
-          pylan[voiceChoice].volume = slideValue / 100;
+          pylan[voiceChoice].volume = level;
           pylan[voiceChoice].play();
         }
         navigate("/exer3");
@@ -51,6 +53,8 @@ function Exer2({
           chooseAudio={chooseAudio}
           slideValue={slideValue}
           handleChange={handleChange}
+          handleLevel={handleLevel}
+          lev={level}
         />
         <div className="navyExer">
           <h1 className="guidTitle">

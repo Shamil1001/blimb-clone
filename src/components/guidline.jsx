@@ -53,7 +53,7 @@ function Guidline({
           slideValue={slideValue}
           handleChange={handleChange}
           handleLevel={handleLevel}
-          level={level}
+          lev={level}
         />
         <div className="navyGuid">
           <p className="guidTitle">

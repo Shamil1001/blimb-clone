@@ -18,7 +18,7 @@ function Navbar2({
   slideValue,
   handleChange,
   handleLevel,
-  level,
+  lev,
 }) {
   const [volumeAct, setVolumeAct] = useState(false);
   const [volPanel, setVolPanel] = useState(false);
@@ -33,6 +33,54 @@ function Navbar2({
 
   var checkMouse;
 
+  if (lev == 1) {
+    $(".pointVolume:eq(0)").addClass("active");
+  }
+  if (lev == 0.9) {
+    $(".pointVolume:eq(1)").addClass("active");
+  }
+  if (lev == 0.8) {
+    $(".pointVolume:eq(2)").addClass("active");
+  }
+  if (lev == 0.7) {
+    $(".pointVolume:eq(3)").addClass("active");
+  }
+  if (lev == 0.6) {
+    $(".pointVolume:eq(4)").addClass("active");
+  }
+  if (lev == 0.5) {
+    $(".pointVolume:eq(5)").addClass("active");
+  }
+  if (lev == 0.4) {
+    $(".pointVolume:eq(6)").addClass("active");
+  }
+  if (lev == 0.3) {
+    $(".pointVolume:eq(7)").addClass("active");
+  }
+  if (lev == 0.2) {
+    $(".pointVolume:eq(8)").addClass("active");
+  }
+
+  if (lev == 0.1) {
+    $(".pointVolume").last().addClass("active");
+  }
+
+  $(".slideLineVolume")
+    .find(".after")
+    .css({
+      height: lev * 100 + "%",
+    });
+
+  if (lev == 1 || lev == 0.9) {
+    $(".volumePanel").prop("id", "maximum");
+  } else if (lev == 0.8 || lev == 0.7 || lev == 0.6) {
+    $(".volumePanel").prop("id", "middle");
+  } else if (lev == 0.5 || lev == 0.4 || lev == 0.3) {
+    $(".volumePanel").prop("id", "medium");
+  } else {
+    $(".volumePanel").prop("id", "minimum");
+  }
+
   function changeAudioVolume(level) {
     audio1.volume = level;
     audio2.volume = level;
@@ -43,20 +91,20 @@ function Navbar2({
 
     var volume = $(".volume");
 
-    $(".slideLineVolume")
-      .find(".after")
-      .css({
-        height: level * 100 + "%",
-      });
-    if (level == 1 || level == 0.9) {
-      $(".volumePanel").prop("id", "maximum");
-    } else if (level == 0.8 || level == 0.7 || level == 0.6) {
-      $(".volumePanel").prop("id", "middle");
-    } else if (level == 0.5 || level == 0.4 || level == 0.3) {
-      $(".volumePanel").prop("id", "medium");
-    } else {
-      $(".volumePanel").prop("id", "minimum");
-    }
+    // $(".slideLineVolume")
+    //   .find(".after")
+    //   .css({
+    //     height: lev * 100 + "%",
+    //   });
+    // if (level == 1 || level == 0.9) {
+    //   $(".volumePanel").prop("id", "maximum");
+    // } else if (level == 0.8 || level == 0.7 || level == 0.6) {
+    //   $(".volumePanel").prop("id", "middle");
+    // } else if (level == 0.5 || level == 0.4 || level == 0.3) {
+    //   $(".volumePanel").prop("id", "medium");
+    // } else {
+    //   $(".volumePanel").prop("id", "minimum");
+    // }
 
     // pylan[voiceChoice].play();
 
@@ -80,6 +128,8 @@ function Navbar2({
     // }
   }
 
+  // $(".pointVolume").first().addClass("active");
+
   $(".slideLineVolume")
     .mousedown(function () {
       checkMouse = true;
@@ -88,7 +138,7 @@ function Navbar2({
           if (checkMouse) {
             $(".pointVolume").removeClass("active");
             $(this).addClass("active");
-            // handleLevel($(this).attr("data-volume"));
+            handleLevel($(this).attr("data-volume"));
             // changeAudioVolume(level);
             changeAudioVolume($(this).attr("data-volume"));
           }
@@ -96,7 +146,7 @@ function Navbar2({
         .click(function () {
           $(".pointVolume").removeClass("active");
           $(this).addClass("active");
-          // handleLevel($(this).attr("data-volume"));
+          handleLevel($(this).attr("data-volume"));
           // changeAudioVolume(level);
           changeAudioVolume($(this).attr("data-volume"));
         });
@@ -107,6 +157,8 @@ function Navbar2({
     .mouseleave(function () {
       checkMouse = false;
     });
+
+  // changeAudioVolume(level);
 
   return (
     <>
@@ -159,7 +211,7 @@ function Navbar2({
                   : "slideLineVolume visActive"
               }
             >
-              <div className="pointVolume active" data-volume="1"></div>
+              <div className="pointVolume" data-volume="1"></div>
               <div className="pointVolume" data-volume="0.9"></div>
               <div className="pointVolume" data-volume="0.8"></div>
               <div className="pointVolume" data-volume="0.7"></div>

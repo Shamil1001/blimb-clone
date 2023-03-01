@@ -24,7 +24,7 @@ function Exercise({
       // console.log(pylan[voiceChoice]);
       if (counter == 0) {
         if (voiceChoice !== "four") {
-          pylan[voiceChoice].volume = slideValue / 100;
+          pylan[voiceChoice].volume = level;
           pylan[voiceChoice].play();
         }
         navigate("/exer2");
@@ -55,7 +55,7 @@ function Exercise({
           slideValue={slideValue}
           handleChange={handleChange}
           handleLevel={handleLevel}
-          level={level}
+          lev={level}
         />
         <div className="navyExer">
           <h1 className="guidTitle">

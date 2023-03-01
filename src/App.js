@@ -30,8 +30,8 @@ function App() {
   const [level, setLevel] = useState(1);
 
   const handleLevel = (lev) => {
-    console.log(lev);
     setLevel(lev);
+    console.log(lev);
   };
 
   const handleChange = (newValue) => {
@@ -40,7 +40,7 @@ function App() {
 
   const chooseAudio = (e) => {
     if (e !== "four") {
-      pylan[e].volume = slideValue / 100;
+      pylan[e].volume = level;
       pylan[e].play();
     }
     setVoiceChoice(e);
