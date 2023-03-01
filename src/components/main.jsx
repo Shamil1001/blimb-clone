@@ -14,6 +14,8 @@ function Main({
   chooseAudio,
   slideValue,
   handleChange,
+  handleLevel,
+  level,
 }) {
   const [eyeActive, setEyeActive] = useState(false);
 
@@ -30,6 +32,8 @@ function Main({
           slideValue={slideValue}
           handleChange={handleChange}
           eyeActive={eyeActive}
+          handleLevel={handleLevel}
+          level={level}
         />
         <div className="navy">
           <Link to="/guid/" style={{ color: "white", textDecoration: "none" }}>

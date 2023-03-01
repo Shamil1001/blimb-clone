@@ -13,6 +13,8 @@ function Guidline({
   voiceChoice,
   slideValue,
   handleChange,
+  handleLevel,
+  level,
 }) {
   const guideLang = [
     { eng: "Guidlines", rus: "Рекомендации" },
@@ -50,6 +52,8 @@ function Guidline({
           voiceChoice={voiceChoice}
           slideValue={slideValue}
           handleChange={handleChange}
+          handleLevel={handleLevel}
+          level={level}
         />
         <div className="navyGuid">
           <p className="guidTitle">

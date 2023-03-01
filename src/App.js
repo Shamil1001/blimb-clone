@@ -27,6 +27,13 @@ function App() {
   const [voiceChoice, setVoiceChoice] = useState("one");
   const [slideValue, setSlideValue] = useState(50);
 
+  const [level, setLevel] = useState(1);
+
+  const handleLevel = (lev) => {
+    console.log(lev);
+    setLevel(lev);
+  };
+
   const handleChange = (newValue) => {
     setSlideValue(newValue);
   };
@@ -96,6 +103,8 @@ function App() {
               voiceChoice={voiceChoice}
               slideValue={slideValue}
               handleChange={handleChange}
+              handleLevel={handleLevel}
+              level={level}
             />
           }
         />
@@ -112,6 +121,8 @@ function App() {
               voiceChoice={voiceChoice}
               slideValue={slideValue}
               handleChange={handleChange}
+              handleLevel={handleLevel}
+              level={level}
             />
           }
         ></Route>
@@ -130,6 +141,8 @@ function App() {
                 voiceChoice={voiceChoice}
                 slideValue={slideValue}
                 handleChange={handleChange}
+                handleLevel={handleLevel}
+                level={level}
               />
             }
           ></Route>

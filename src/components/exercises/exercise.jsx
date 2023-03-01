@@ -12,6 +12,8 @@ function Exercise({
   chooseAudio,
   slideValue,
   handleChange,
+  handleLevel,
+  level,
 }) {
   const navigate = useNavigate();
 
@@ -52,6 +54,8 @@ function Exercise({
           chooseAudio={chooseAudio}
           slideValue={slideValue}
           handleChange={handleChange}
+          handleLevel={handleLevel}
+          level={level}
         />
         <div className="navyExer">
           <h1 className="guidTitle">

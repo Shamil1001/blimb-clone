@@ -17,6 +17,8 @@ function Navbar2({
   voiceChoice,
   slideValue,
   handleChange,
+  handleLevel,
+  level,
 }) {
   const [volumeAct, setVolumeAct] = useState(false);
   const [volPanel, setVolPanel] = useState(false);
@@ -56,7 +58,18 @@ function Navbar2({
       $(".volumePanel").prop("id", "minimum");
     }
 
-    pylan[voiceChoice].play();
+    // pylan[voiceChoice].play();
+
+    if (volume.hasClass("firstVoice")) {
+      audio1.play();
+      // pylan["one"].play();
+    } else if (volume.hasClass("secondVoice")) {
+      audio2.play();
+      // pylan["two"].play();
+    } else {
+      // pylan["three"].play();
+      audio3.play();
+    }
 
     // if (voiceChoice) {
     //   audio1.play();
@@ -75,13 +88,17 @@ function Navbar2({
           if (checkMouse) {
             $(".pointVolume").removeClass("active");
             $(this).addClass("active");
-            changeAudioVolume($(this).attr("data-volume"));
+            handleLevel($(this).attr("data-volume"));
+            changeAudioVolume(level);
+            // changeAudioVolume($(this).attr("data-volume"));
           }
         })
         .click(function () {
           $(".pointVolume").removeClass("active");
           $(this).addClass("active");
-          changeAudioVolume($(this).attr("data-volume"));
+          handleLevel($(this).attr("data-volume"));
+          changeAudioVolume(level);
+          // changeAudioVolume($(this).attr("data-volume"));
         });
     })
     .mouseup(function () {
