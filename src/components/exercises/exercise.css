@@ -151,17 +151,27 @@
   }
 }
 
+.boxContainer {
+  position: absolute;
+  top: 70%;
+  left: -29%;
+  width: 95vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 /* vibrate */
 .box1 {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  margin: auto;
+  /* margin: auto; */
   /* margin-top: 50px; */
   /* margin-bottom: 50px; */
-  position: absolute;
+  /* position: absolute;
   top: 70%;
-  left: 48%;
+  left: 47%; */
+
   background-color: white;
   opacity: 50%;
   animation: box1 1s infinite;

@@ -198,7 +198,7 @@ ul {
   transition-duration: 1s;
 }
 
-.slide_line_volume {
+.slideLineVolume {
   width: 20px;
   user-select: none;
   position: absolute;
@@ -213,7 +213,7 @@ ul {
   transition-duration: 1s;
 }
 
-.point_volume {
+.pointVolume {
   position: relative;
   z-index: 1;
   height: 10px;
