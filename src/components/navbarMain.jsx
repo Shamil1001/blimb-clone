@@ -25,20 +25,12 @@ function Navbar({
   let audio2 = new Audio(audi2);
   let audio3 = new Audio(audi3);
 
-  // const [checkMouse, setCheckMouse] = useState(false);
   var checkMouse;
 
   function changeAudioVolume(level) {
     audio1.volume = level;
     audio2.volume = level;
     audio3.volume = level;
-    let vol = lev;
-    // console.log(vol);
-    // audio1.currentTime = 0;
-    // audio2.currentTime = 0;
-    // audio3.currentTime = 0;
-
-    console.log(level);
 
     var volume = $(".volume");
 
@@ -79,8 +71,6 @@ function Navbar({
     setVolumeAct(!volumeAct);
   };
 
-  // $(".pointVolume").first().addClass("active");
-
   $(".slideLineVolume")
     .mousedown(function () {
       checkMouse = true;
@@ -109,26 +99,6 @@ function Navbar({
     .mouseleave(function () {
       checkMouse = false;
     });
-
-  // let offsetX, offsetY;
-  // const move = (e) => {
-  //   const el = e.target;
-  //   el.style.top = `${e.pageY - offsetY}px`;
-  // };
-
-  // const add = (e) => {
-  //   const el = e.target;
-  //   setCheckMouse(true);
-  //   console.log("shamil");
-  //   offsetY = e.clientY - el.getBoundingClientRect().top;
-  //   // offsetY = e.clientY;
-  //   // console.log(offsetY);
-  //   el.addEventListener("mousemove", move);
-  // };
-  // const remove = (e) => {
-  //   const el = e.target;
-  //   el.removeEventListener("mousemove", move);
-  // };
 
   return (
     <>
@@ -172,8 +142,6 @@ function Navbar({
             id="maximum"
           ></div>
           <div
-            // onMouseDown={add}
-            // onMouseUp={remove}
             className={
               volPanel === false
                 ? "slideLineVolume"

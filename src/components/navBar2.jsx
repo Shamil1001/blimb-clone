@@ -128,8 +128,6 @@ function Navbar2({
     // }
   }
 
-  // $(".pointVolume").first().addClass("active");
-
   $(".slideLineVolume")
     .mousedown(function () {
       checkMouse = true;
