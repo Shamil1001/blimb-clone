@@ -79,6 +79,9 @@ function Navbar({
     audio1.volume = level;
     audio2.volume = level;
     audio3.volume = level;
+    audio1.currentTime = 0;
+    audio2.currentTime = 0;
+    audio3.currentTime = 0;
 
     var volume = $(".volume");
 
@@ -98,15 +101,12 @@ function Navbar({
     // }
 
     if (volume.hasClass("firstVoice")) {
-      audio1.volume = level;
       audio1.play();
       // pylan["one"].play();
     } else if (volume.hasClass("secondVoice")) {
-      audio2.volume = level;
       audio2.play();
       // pylan["two"].play();
     } else {
-      audio3.volume = level;
       // pylan["three"].play();
       audio3.play();
     }
