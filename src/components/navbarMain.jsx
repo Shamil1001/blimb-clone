@@ -27,6 +27,54 @@ function Navbar({
 
   var checkMouse;
 
+  if (lev == 1) {
+    $(".pointVolume:eq(0)").addClass("active");
+  }
+  if (lev == 0.9) {
+    $(".pointVolume:eq(1)").addClass("active");
+  }
+  if (lev == 0.8) {
+    $(".pointVolume:eq(2)").addClass("active");
+  }
+  if (lev == 0.7) {
+    $(".pointVolume:eq(3)").addClass("active");
+  }
+  if (lev == 0.6) {
+    $(".pointVolume:eq(4)").addClass("active");
+  }
+  if (lev == 0.5) {
+    $(".pointVolume:eq(5)").addClass("active");
+  }
+  if (lev == 0.4) {
+    $(".pointVolume:eq(6)").addClass("active");
+  }
+  if (lev == 0.3) {
+    $(".pointVolume:eq(7)").addClass("active");
+  }
+  if (lev == 0.2) {
+    $(".pointVolume:eq(8)").addClass("active");
+  }
+
+  if (lev == 0.1) {
+    $(".pointVolume").last().addClass("active");
+  }
+
+  $(".slideLineVolume")
+    .find(".after")
+    .css({
+      height: lev * 100 + "%",
+    });
+
+  if (lev == 1 || lev == 0.9) {
+    $(".volumePanel").prop("id", "maximum");
+  } else if (lev == 0.8 || lev == 0.7 || lev == 0.6) {
+    $(".volumePanel").prop("id", "middle");
+  } else if (lev == 0.5 || lev == 0.4 || lev == 0.3) {
+    $(".volumePanel").prop("id", "medium");
+  } else {
+    $(".volumePanel").prop("id", "minimum");
+  }
+
   function changeAudioVolume(level) {
     audio1.volume = level;
     audio2.volume = level;
@@ -34,33 +82,33 @@ function Navbar({
 
     var volume = $(".volume");
 
-    $(".slideLineVolume")
-      .find(".after")
-      .css({
-        height: level * 100 + "%",
-      });
-    if (level == 1 || level == 0.9) {
-      $(".volumePanel").prop("id", "maximum");
-    } else if (level == 0.8 || level == 0.7 || level == 0.6) {
-      $(".volumePanel").prop("id", "middle");
-    } else if (level == 0.5 || level == 0.4 || level == 0.3) {
-      $(".volumePanel").prop("id", "medium");
-    } else {
-      $(".volumePanel").prop("id", "minimum");
-    }
+    // $(".slideLineVolume")
+    //   .find(".after")
+    //   .css({
+    //     height: level * 100 + "%",
+    //   });
+    // if (level == 1 || level == 0.9) {
+    //   $(".volumePanel").prop("id", "maximum");
+    // } else if (level == 0.8 || level == 0.7 || level == 0.6) {
+    //   $(".volumePanel").prop("id", "middle");
+    // } else if (level == 0.5 || level == 0.4 || level == 0.3) {
+    //   $(".volumePanel").prop("id", "medium");
+    // } else {
+    //   $(".volumePanel").prop("id", "minimum");
+    // }
 
     if (volume.hasClass("firstVoice")) {
-      // audio1.play();
-      pylan["one"].volume = level;
-      pylan["one"].play();
+      audio1.volume = level;
+      audio1.play();
+      // pylan["one"].play();
     } else if (volume.hasClass("secondVoice")) {
-      // audio2.play();
-      pylan["two"].volume = level;
-      pylan["two"].play();
+      audio2.volume = level;
+      audio2.play();
+      // pylan["two"].play();
     } else {
-      pylan["three"].volume = level;
-      pylan["three"].play();
-      // audio3.play();
+      audio3.volume = level;
+      // pylan["three"].play();
+      audio3.play();
     }
   }
 
@@ -79,17 +127,17 @@ function Navbar({
           if (checkMouse) {
             $(".pointVolume").removeClass("active");
             $(this).addClass("active");
-            console.log($(this).attr("data-volume"));
+            // console.log($(this).attr("data-volume"));
             handleLevel($(this).attr("data-volume"));
-            // changeAudioVolume(level);
+            // changeAudioVolume(lev);
             changeAudioVolume($(this).attr("data-volume"));
           }
         })
         .click(function () {
           $(".pointVolume").removeClass("active");
           $(this).addClass("active");
-          // handleLevel($(this).attr("data-volume"));
-          // changeAudioVolume(level);
+          handleLevel($(this).attr("data-volume"));
+          // changeAudioVolume(lev);
           changeAudioVolume($(this).attr("data-volume"));
         });
     })

@@ -28,7 +28,7 @@ function Exer11({
       setCounter((prevCounter) => prevCounter - 1);
       if (counter == 0) {
         if (voiceChoice !== "four") {
-          pylan[voiceChoice].volume = slideValue / 100;
+          pylan[voiceChoice].volume = level;
           pylan[voiceChoice].play();
         }
         navigate("/exer12");
